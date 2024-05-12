@@ -52,13 +52,14 @@ export class AppComponent implements OnInit {
   public derivativeoption: boolean = false;
   //public optidxstxoption: boolean = true;
   //public optidxstxoption: boolean = true;
-  public expiry: string[] = [];
+  public strikePrices: string[] = [];
   public currentDate: string = '';
 
   searchControl = new FormControl();
   options: string[] = [];
   filteredOptions: string[] = [];
   expiryDates: string[] = [];
+
   constructor(private stocksService: StocksService) {
     this.setCurrentDate();
   }
@@ -107,6 +108,8 @@ export class AppComponent implements OnInit {
       HS: '',
       HR: ''
     };
+    this.expiryDates = [];
+    this.strikePrices = [];
   }
 
   onDateOrExpiryChange() {
@@ -124,6 +127,13 @@ export class AppComponent implements OnInit {
     this.equitydata.Instrument = '';
     this.equitydata.OptionType = '';
     this.options = [];
+    this.enableSymbolSearch();
+  }
+
+  onOptionTypeChange() {
+    if (['CE', 'PE'].includes(this.equitydata.Type)) {
+
+    }
     this.enableSymbolSearch();
   }
 

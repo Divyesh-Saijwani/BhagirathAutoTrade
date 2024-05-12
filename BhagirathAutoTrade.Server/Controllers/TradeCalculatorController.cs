@@ -145,6 +145,41 @@ namespace BhagirathAutoTrade.Controllers
 
         private void UpdateExcel(EquityDetailedData data)
         {
+            var trend = data.txt_K13_not.ToLower();
+            decimal S3 = 0;
+            decimal R2 = 0;
+            var Sbap = Math.Round(Convert.ToDecimal(data.txt_J13), 2);
+            var Rbap = Math.Round(Convert.ToDecimal(data.txt_N13), 2);
+            decimal sellSL = 0;
+            decimal buySL = 0;
+
+            switch(trend)
+            {
+                case "buy":
+                    S3 = Math.Round(Convert.ToDecimal(data.txt_J6), 2);
+                    R2 = Math.Round(Convert.ToDecimal(data.txt_P6), 2);
+                    sellSL = Math.Round(Convert.ToDecimal(data.txt_t11), 2);
+                    buySL = Math.Round(Convert.ToDecimal(data.txt_d11), 2);
+                    break;
+
+                case "sell":
+                    S3 = Math.Round(Convert.ToDecimal(data.txt_I6), 2);
+                    R2 = Math.Round(Convert.ToDecimal(data.txt_O6), 2);
+                    sellSL = Math.Round(Convert.ToDecimal(data.txt_t11) + .10m, 2);
+                    buySL = Math.Round(Convert.ToDecimal(data.txt_d11) - .10m, 2);
+                    break;
+
+                default:
+                    S3 = Math.Round(Convert.ToDecimal(data.txt_I6), 2);
+                    R2 = Math.Round(Convert.ToDecimal(data.txt_P6), 2);
+                    Sbap = Math.Round(Convert.ToDecimal(data.txt_I6), 2);
+                    Rbap = Math.Round(Convert.ToDecimal(data.txt_P6), 2);
+                    sellSL = Math.Round(Convert.ToDecimal(data.txt_t8) + .10m, 2);
+                    buySL = Math.Round(Convert.ToDecimal(data.txt_d8) - .10m, 2);
+                    break;
+            }
+
+
             ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
             using (ExcelPackage excelPackage = new ExcelPackage(new FileInfo(_excelFilePath)))
             {
@@ -156,17 +191,14 @@ namespace BhagirathAutoTrade.Controllers
                     sheet1.Cells[2, 6].Value = data.RS; // RS
                     sheet1.Cells[4, 5].Value = data.HS; // HS
                     sheet1.Cells[4, 6].Value = data.HR; // HR
-
-                    var Sbap = Math.Round(Convert.ToDecimal(data.txt_J13), 2);
-                    var Rbap = Math.Round(Convert.ToDecimal(data.txt_N13), 2);
                     sheet1.Cells[6, 5].Value = Sbap; // S-BAP
                     sheet1.Cells[6, 6].Value = Rbap; // R-BAP
 
-                    var S3 = Math.Round(Convert.ToDecimal(data.txt_I6), 2);
-                    var R2 = Math.Round(Convert.ToDecimal(data.txt_O6), 2);
+                    
                     sheet1.Cells[8, 5].Value = S3; // S3
                     sheet1.Cells[8, 6].Value = R2; // R2
 
+                    // Buy points calculations
                     ExcelWorksheet sheet2 = excelPackage.Workbook.Worksheets[1];
                     sheet2.Cells[4, 1].Value = data.SelectSymbol;
                     sheet2.Cells[4, 2].Value = data.expirydate;
@@ -184,8 +216,11 @@ namespace BhagirathAutoTrade.Controllers
                     var buyPointMin = buyPoints.Min();
                     var buyPointAverage = (buyPointMax + buyPointMin) / 2;
 
-                    sheet2.Cells[4, 5].Value = $"{buyPointMax}, {buyPointAverage}, {buyPointMin}";
+                    sheet2.Cells[4, 5].Value = $"{buyPointMax}, {buyPointAverage}, {buyPointMin}"; // entry points
+                    sheet2.Cells[4, 6].Value = buySL; // Buy Stop Loss
 
+
+                    // Sell points calculation
                     ExcelWorksheet sheet3 = excelPackage.Workbook.Worksheets[2];
                     sheet3.Cells[4, 1].Value = data.SelectSymbol;
                     sheet3.Cells[4, 2].Value = data.expirydate;
@@ -193,12 +228,19 @@ namespace BhagirathAutoTrade.Controllers
                     sheet3.Cells[2, 8].Value = "Exit Time";
                     sheet3.Cells[4, 8].Value = data.RST;
 
-                    var sellPoints = new List<decimal> { (data.SS + ssrs), (data.HS + hsrs), (Sbap + srbap), (S3 + s3r2) };
+                    var sellPoints = new List<decimal> { (data.SS - ssrs), (data.HS - hsrs), (Sbap - srbap), (S3 - s3r2) };
                     var sellPointMax = sellPoints.Max();
                     var sellPointMin = sellPoints.Min();
                     var sellPointAverage = (sellPointMax + sellPointMin) / 2;
 
-                    sheet3.Cells[4, 5].Value = $"{sellPointMin}, {sellPointAverage}, {sellPointMax}";
+                    sheet3.Cells[4, 5].Value = $"{sellPointMin}, {sellPointAverage}, {sellPointMax}"; // exit points
+                    sheet3.Cells[4, 6].Value = sellSL; // Sell Stop Loss
+
+
+                    // Target for both Buy and Sell
+
+                    sheet2.Cells[4, 7].Value = sellPoints.Min(); // Buy target
+                    sheet3.Cells[4, 7].Value = buyPoints.Max(); // Sell target
 
                     excelPackage.Save();
                 }
