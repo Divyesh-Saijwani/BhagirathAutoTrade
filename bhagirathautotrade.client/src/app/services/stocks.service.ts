@@ -39,18 +39,18 @@ export class StocksService {
     return Object.keys(obj).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`).join('&');
   }
 
-  getStrikePrice(exchange: string, type: string, symbol: string, expireDate: string): Observable<any> {
-    const url = `${APIUrlConstants.BhagirathApiUrl}/Equity/GetStrikePrice`;
+  getStrikePrice(exchange: string, type: string, symbole: string, expiryDate: string): Observable<any> {
+    const url = `${APIUrlConstants.BaseUrl}/Equity/GetStrikePrice`;
     const params = {
       exchange,
       type,
-      symbol,
-      expireDate
+      symbole,
+      expiryDate
     };
 
     return this.http.post<any>(url, params).pipe(map(response => {
-      if (response.Success == 1) {
-        return response.Data;
+      if (response) {
+        return response;
       }
     }));
   }

@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BhagirathAutoTrade.Server", "BhagirathAutoTrade.Server\BhagirathAutoTrade.Server.csproj", "{EBE2A111-FFC4-4745-957D-49991C838331}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BhagirathAutoTrade.Server", "BhagirathAutoTrade.Server\BhagirathAutoTrade.Server.csproj", "{EBE2A111-FFC4-4745-957D-49991C838331}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "bhagirathautotrade.client", "bhagirathautotrade.client\bhagirathautotrade.client.esproj", "{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BhagirathAPI", "BhagirathAPI\BhagirathAPI.csproj", "{B2D30761-2BD5-4564-8886-9F241E45FD73}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B2D30761-2BD5-4564-8886-9F241E45FD73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2D30761-2BD5-4564-8886-9F241E45FD73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2D30761-2BD5-4564-8886-9F241E45FD73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2D30761-2BD5-4564-8886-9F241E45FD73}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

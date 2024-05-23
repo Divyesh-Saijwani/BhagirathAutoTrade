@@ -49,5 +49,12 @@ namespace BhagirathAutoTrade.Server.Controllers
             var data = await _equityService.GetExpiryDateAsync(symbol, optionType);
             return Ok(data);
         }
+
+        [HttpPost("GetStrikePrice")]
+        public async Task<ActionResult<List<string>>> GetStrikePrice([FromBody] EquityRequestModel model)
+        {
+            var data = await _equityService.GetStrikePriceAsync(model.Exchange, model.Type, model.Symbole, model.ExpiryDate);
+            return Ok(data);
+        }
     }
 }

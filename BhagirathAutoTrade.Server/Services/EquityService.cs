@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System.Net.Http.Headers;
 using JsonSerializer = System.Text.Json.JsonSerializer;
 using BhagirathAutoTrade.Server.Services.Interfaces;
+using System.Diagnostics.Metrics;
 
 namespace BhagirathAutoTrade.Server.Services
 {
@@ -126,28 +127,52 @@ namespace BhagirathAutoTrade.Server.Services
                     OptionType = optionType
                 };
                 var myContent = JsonConvert.SerializeObject(requestModel);
-            var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
-            var byteContent = new ByteArrayContent(buffer);
+                var buffer = System.Text.Encoding.UTF8.GetBytes(myContent);
+                var byteContent = new ByteArrayContent(buffer);
 
-            byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            // Sample data for POST request
-            var response = await _httpClient.PostAsync(query, byteContent);
+                // Sample data for POST request
+                var response = await _httpClient.PostAsync(query, byteContent);
 
-            response.EnsureSuccessStatusCode();
+                response.EnsureSuccessStatusCode();
 
-            var content = await response.Content.ReadAsStringAsync();
+                var content = await response.Content.ReadAsStringAsync();
 
-            var result = JsonSerializer.Deserialize<AutocompleteResponse>(content);
+                var result = JsonSerializer.Deserialize<AutocompleteResponse>(content);
 
-            return result.Data;
-        }
+                return result.Data;
+            }
             catch (Exception ex)
             {
                 // Handle exception
                 Console.WriteLine($"An error occurred: {ex.Message}");
                 throw;
             }
-}
+        }
+
+        public async Task<List<string>> GetStrikePriceAsync(string exchange, string type, string symbol, string expiryDate)
+        {
+            try
+            {
+                var url = $"GetStrikePrice?exchange={exchange}&type={type}&symbol={symbol}&expireDate={expiryDate}";
+
+                var response = await _httpClient.PostAsync(url, null);
+                response.EnsureSuccessStatusCode();
+
+                var responseData = await response.Content.ReadAsStringAsync();
+
+                var result = JsonSerializer.Deserialize<APIResponseModel<List<string>>>(responseData);
+
+                return result.Data;
+            }
+            catch (Exception ex)
+            {
+                // Handle exception
+                Console.WriteLine($"An error occurred: {ex.Message}");
+                throw;
+            }
+        }
+
     }
 }

@@ -114,6 +114,12 @@ export class AppComponent implements OnInit {
 
   onDateOrExpiryChange() {
     this.resetStockData();
+    if (this.equitydata.Symbole && this.equitydata.ExpiryDate) {
+      this.stocksService.getStrikePrice(this.equitydata.Exchange, this.equitydata.Type, this.equitydata.Symbole, this.equitydata.ExpiryDate).subscribe(result => {
+        this.strikePrices = result;
+      })
+    }
+    
     if (this.equitydata.Symbole && this.equitydata.ExpiryDate && this.equitydata.WorkingDate) {
       this.stocksService.getCloseData(this.equitydata).subscribe(result => {
         this.equitydata.Close = result.toString();
