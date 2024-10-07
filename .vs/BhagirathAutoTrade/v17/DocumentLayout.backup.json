@@ -1,0 +1,485 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\controllers\\tradecalculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\controllers\\tradecalculatorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\controllers\\equitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\controllers\\equitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\app\\services\\stocks.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}|",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\app\\services\\stocks.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\app\\models\\apiurl-constants.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\app\\models\\apiurl-constants.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\app\\app.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\app\\services\\cache.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\app\\services\\cache.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\app\\services\\calculations.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\app\\services\\calculations.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\app\\services\\data.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\app\\services\\data.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\app\\models\\equity-data.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\app\\models\\equity-data.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\models\\equitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\models\\equitydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\services\\equityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\services\\equityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\services\\interfaces\\iequityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\services\\interfaces\\iequityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\models\\equityresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\models\\equityresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\models\\equitydatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\models\\equitydatamodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\models\\equityrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\models\\equityrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\models\\dtorequestmodelforcalculate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\models\\dtorequestmodelforcalculate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\models\\apiresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\models\\apiresponsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\node_modules\\rxjs\\dist\\esm5\\internal\\Subscriber.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:bhagirathautotrade.client\\node_modules\\rxjs\\dist\\esm5\\internal\\Subscriber.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.client\\src\\proxy.conf.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{65687846-7DA3-4BCA-99BD-A6FCBEAA5B77}|bhagirathautotrade.client\\bhagirathautotrade.client.esproj|solutionrelative:bhagirathautotrade.client\\src\\proxy.conf.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathautotrade.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EBE2A111-FFC4-4745-957D-49991C838331}|BhagirathAutoTrade.Server\\BhagirathAutoTrade.Server.csproj|solutionrelative:bhagirathautotrade.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|solutionrelative:bhagirathapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathapi\\models\\bhagirathdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|solutionrelative:bhagirathapi\\models\\bhagirathdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathapi\\models\\stockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|solutionrelative:bhagirathapi\\models\\stockdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|solutionrelative:bhagirathapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathapi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|solutionrelative:bhagirathapi\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|c:\\projects\\bhagirathfincare\\bhagirathautotrade\\bhagirathapi\\migrations\\20240521200020_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B2D30761-2BD5-4564-8886-9F241E45FD73}|BhagirathAPI\\BhagirathAPI.csproj|solutionrelative:bhagirathapi\\migrations\\20240521200020_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:9:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:12:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:16:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:11:0:{2456bd12-ecf7-4988-a4a6-67d49173f565}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:8:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "app.component.ts",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\app.component.ts",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\app\\app.component.ts",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\app.component.ts",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\app\\app.component.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-08-27T02:10:14.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EquityData.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\EquityData.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Models\\EquityData.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\EquityData.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Models\\EquityData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:36:54.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IEquityService.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Services\\Interfaces\\IEquityService.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Services\\Interfaces\\IEquityService.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Services\\Interfaces\\IEquityService.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Services\\Interfaces\\IEquityService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T04:27:27.05Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TradeCalculatorController.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Controllers\\TradeCalculatorController.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Controllers\\TradeCalculatorController.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Controllers\\TradeCalculatorController.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Controllers\\TradeCalculatorController.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAkwCgBAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T20:23:06.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "apiurl-constants.ts",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\models\\apiurl-constants.ts",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\app\\models\\apiurl-constants.ts",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\models\\apiurl-constants.ts",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\app\\models\\apiurl-constants.ts",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAqwAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-05-23T06:37:02.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "stocks.service.ts",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\services\\stocks.service.ts",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\app\\services\\stocks.service.ts",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\services\\stocks.service.ts",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\app\\services\\stocks.service.ts",
+              "ViewState": "AQIAADEAAAAAAAAAAAAQwBwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-05-23T04:11:59.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EquityController.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Controllers\\EquityController.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Controllers\\EquityController.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Controllers\\EquityController.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Controllers\\EquityController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwDIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T20:23:14.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "equity-data.ts",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\models\\equity-data.ts",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\app\\models\\equity-data.ts",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\models\\equity-data.ts",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\app\\models\\equity-data.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-08-04T23:40:24.347Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "calculations.service.ts",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\services\\calculations.service.ts",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\app\\services\\calculations.service.ts",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\services\\calculations.service.ts",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\app\\services\\calculations.service.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-08-04T23:41:30.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "cache.service.ts",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\services\\cache.service.ts",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\app\\services\\cache.service.ts",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\services\\cache.service.ts",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\app\\services\\cache.service.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-08-04T23:41:34.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.component.html",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\app.component.html",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\app\\app.component.html",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\app.component.html",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\app\\app.component.html",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAGIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-04T23:41:40.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "EquityResponseModel.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\EquityResponseModel.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Models\\EquityResponseModel.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\EquityResponseModel.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Models\\EquityResponseModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T09:06:02.616Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "EquityService.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Services\\EquityService.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Services\\EquityService.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Services\\EquityService.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Services\\EquityService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T04:29:34.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "data.service.ts",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\services\\data.service.ts",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\app\\services\\data.service.ts",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\app\\services\\data.service.ts",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\app\\services\\data.service.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-05-23T04:26:44.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "EquityDataModel.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\EquityDataModel.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Models\\EquityDataModel.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\EquityDataModel.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Models\\EquityDataModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T09:04:48.66Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "EquityRequestModel.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\EquityRequestModel.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Models\\EquityRequestModel.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\EquityRequestModel.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Models\\EquityRequestModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-23T06:42:36.342Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DtoRequestModelForCalculate.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\DtoRequestModelForCalculate.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Models\\DtoRequestModelForCalculate.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\DtoRequestModelForCalculate.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Models\\DtoRequestModelForCalculate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:38:38.324Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "APIResponseModel.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\APIResponseModel.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Models\\APIResponseModel.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Models\\APIResponseModel.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Models\\APIResponseModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T09:05:51.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Program.cs",
+              "RelativeDocumentMoniker": "BhagirathAutoTrade.Server\\Program.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAutoTrade.Server\\Program.cs",
+              "RelativeToolTip": "BhagirathAutoTrade.Server\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T21:27:21.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "proxy.conf.js",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\proxy.conf.js",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\src\\proxy.conf.js",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\src\\proxy.conf.js",
+              "RelativeToolTip": "bhagirathautotrade.client\\src\\proxy.conf.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-23T05:07:09.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Subscriber.js",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\node_modules\\rxjs\\dist\\esm5\\internal\\Subscriber.js",
+              "RelativeDocumentMoniker": "bhagirathautotrade.client\\node_modules\\rxjs\\dist\\esm5\\internal\\Subscriber.js",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\bhagirathautotrade.client\\node_modules\\rxjs\\dist\\esm5\\internal\\Subscriber.js",
+              "RelativeToolTip": "bhagirathautotrade.client\\node_modules\\rxjs\\dist\\esm5\\internal\\Subscriber.js",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAtwGkAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-05-23T05:25:16.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20240521200020_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Migrations\\20240521200020_InitialMigration.cs",
+              "RelativeDocumentMoniker": "BhagirathAPI\\Migrations\\20240521200020_InitialMigration.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Migrations\\20240521200020_InitialMigration.cs",
+              "RelativeToolTip": "BhagirathAPI\\Migrations\\20240521200020_InitialMigration.cs",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T20:00:20.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "StockData.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Models\\StockData.cs",
+              "RelativeDocumentMoniker": "BhagirathAPI\\Models\\StockData.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Models\\StockData.cs",
+              "RelativeToolTip": "BhagirathAPI\\Models\\StockData.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAowBIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:35:26.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "BhagirathDBContext.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Models\\BhagirathDBContext.cs",
+              "RelativeDocumentMoniker": "BhagirathAPI\\Models\\BhagirathDBContext.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Models\\BhagirathDBContext.cs",
+              "RelativeToolTip": "BhagirathAPI\\Models\\BhagirathDBContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:34:26.697Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Program.cs",
+              "RelativeDocumentMoniker": "BhagirathAPI\\Program.cs",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Program.cs",
+              "RelativeToolTip": "BhagirathAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-21T19:29:54.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "BhagirathAPI\\appsettings.json",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\appsettings.json",
+              "RelativeToolTip": "BhagirathAPI\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-21T19:27:35.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "BhagirathAPI\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Projects\\BhagirathFinCare\\BhagirathAutoTrade\\BhagirathAPI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "BhagirathAPI\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-21T18:56:26.571Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,8 +1,0 @@
-@BhagirathAutoTrade.Server_HostAddress = http://localhost:5057
-
-GET {{BhagirathAutoTrade.Server_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
-POST {{BhagirathAutoTrade.Server_HostAddress}}/Equity/AutoCompleteCompanyForEquity
-Accept: application/json
