@@ -1,0 +1,46 @@
+<header class="section-header d-flex align-items-center justify-content-between px-3">
+    <div class="d-flex align-items-center">
+        <label for="sidebarToggle" class="position-relative cursor-pointer">
+            <img src="../../../assets/images/hamburger.png" alt="Toggle Icon" class="custom-hamburger-icon" />
+            <!-- <img src="../../../assets/images/left-arrow.png" alt="Toggle Icon" class="left-arrow-icon" /> -->
+        </label>
+        <h3 class="mb-0 ps-4">Algo Money</h3>
+    </div>
+    <aside class="user-profile">
+        <!-- <h6 class="text-primary mb-0 me-2">RP</h6> -->
+        <div class="user-profile px-0">
+            <button class="shadow-none border-0 btn btn-transparent d-flex align-items-center rounded-0 p-0"
+                type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <h6 class=" me-2 mb-0">{{userDetails.fullName}}</h6>
+                <!-- <h6 class=" me-2 mb-0">{{userDetails.fullName}}</h6> -->
+                <div class="user-profile-bg m-0">
+                    <!-- <span class="text-secondary">Ad</span> -->
+                    <span class="text-secondary">{{userDetails.fullName.charAt(0)}}</span>
+                </div>
+            </button>
+            <ul class="dropdown-menu bg-white" aria-labelledby="dropdownMenuButton1">
+                <section>
+                    <!-- User Inital section -->
+                    <div class="d-flex align-items-center border-bottom   py-3">
+                        <div class="user-profile-xs border mx-3">
+                            <!-- <span class="user-profile__initial ">Ad</span> -->
+                            <span class="user-profile__initial ">{{userDetails.fullName.charAt(0)}}</span>
+                        </div>
+                        <!-- User name and email id -->
+                        <div class="px-3">
+                            <h6 class="text-primary">{{userDetails.primaryRole}}</h6>
+                            <!-- <span class="text-primary">{{"admin@bhagirath.com"}}</span> -->
+                            <h6 class="text-primary">{{userDetails.fullName}}</h6>
+                            <span class="text-primary">{{userDetails.email}}</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end p-1 pt-2">
+                        <button class="btn btn-outline-danger d-flex align-items-center" type="button" title="Logout" (click)="logout()">
+                            <span class="d-flex align-items-center flex-column fi-bs-sign-out-alt me-2"></span>
+                            Logout</button>
+                    </div>
+                </section>
+            </ul>
+        </div>
+    </aside>
+</header>

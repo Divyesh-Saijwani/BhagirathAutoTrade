@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "MarketDataSync.AlgoMoney": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7298",
+      "launchBrowser": false
+    }
+  }
+}

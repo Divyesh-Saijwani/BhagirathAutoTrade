@@ -1,0 +1,82 @@
+﻿namespace BhagirathFincareClassLibrary.Models
+{
+    public partial class Calculator
+    {
+        public string IDH { get; set; }
+        public string txt_m3 { get; set; }
+        public string txt_U6 { get; set; }
+        public string txt_m4 { get; set; }
+        public string txt_T6 { get; set; }
+        public string txt_m5 { get; set; }
+        public string txt_S6 { get; set; }
+        public string txt_l8 { get; set; }
+        public string txt_R6 { get; set; }
+        public string txt_d8 { get; set; }
+        public string txt_Q6 { get; set; }
+        public string txt_t8 { get; set; }
+        public string txt_P6 { get; set; }
+        public string txt_t10 { get; set; }
+        public string txt_O6 { get; set; }
+        public string txt_d10 { get; set; }
+        public string txt_N6 { get; set; }
+        public string txt_t11 { get; set; }
+        public string txt_M6 { get; set; }
+        public string txt_d11 { get; set; }
+        public string txt_K6 { get; set; }
+        public string txt_q16 { get; set; }
+        public string txt_J6 { get; set; }
+        public string txt_f19 { get; set; }
+        public string txt_I6 { get; set; }
+        public string txt_k8 { get; set; }
+        public string txt_H6 { get; set; }
+        public string txt_m8 { get; set; }
+        public string txt_G6 { get; set; }
+        public string txt_K9 { get; set; }
+        public string txt_F6 { get; set; }
+        public string txt_M9 { get; set; }
+        public string txt_E6 { get; set; }
+        public string txt_K13 { get; set; }
+        public string txt_D6 { get; set; }
+        public string txt_H12 { get; set; }
+        public string txt_I12 { get; set; }
+        public string txt_K13_not { get; set; }
+        public string txt_O12 { get; set; }
+        public string txt_J13 { get; set; }
+        public string txt_N13 { get; set; }
+        public string TextBox1 { get; set; }
+        public string Negative { get; set; }
+        public string TextBox2 { get; set; }
+        public string Label16 { get; set; }
+        public string TextBox3 { get; set; }
+        public string txt_reversecall { get; set; }
+        public string txt_reverseBAP { get; set; }
+        public string txt_Buysl { get; set; }
+        public string txt_buyt1 { get; set; }
+        public string txt_buyt2 { get; set; }
+        public string Txt_buyt3 { get; set; }
+        public string Txt_salet3 { get; set; }
+        public string Txt_salet2 { get; set; }
+        public string Txt_salet1 { get; set; }
+        public string Txt_salesl { get; set; }
+        public string txt_tcreversecall { get; set; }
+        public string txt_BVCBAP { get; set; }
+        public string txt_tcBuysl { get; set; }
+        public string txt_tcbuyt1 { get; set; }
+        public string txt_tcbuyt2 { get; set; }
+        public string txt_tcbuyt3 { get; set; }
+        public string Txt_tcsalet3 { get; set; }
+        public string Txt_tcsalet2 { get; set; }
+        public string Txt_tcsalet1 { get; set; }
+        public string Txt_tcsalesl { get; set; }
+        public string Label60 { get; set; }
+        public string Label45 { get; set; }
+        public string WorkingDate { get; set; }
+        public string Companyname { get; set; }
+        public string expirydate { get; set; }
+        public string strikeprice { get; set; }
+        public string Result { get; set; }
+        public string SelectSymbol { get; set; }
+        //public IEnumerable<SelectListItem> Symbol { get; set; }
+
+    }
+}

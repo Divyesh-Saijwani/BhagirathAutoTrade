@@ -1,0 +1,105 @@
+/* ===============================
+    Override bootstrap variables
+================================== */
+
+// Theme Primary Color
+$primary: #004e7d;
+$primary-light: #1d3557;
+// Mainly use for UI controls like Buttons
+$secondary: #00b7f1;
+// Used for Footer Section
+$accent: #e97200;
+// Mainly use for Normal Text color
+$gray: #8a8c83;
+// Border & Separators
+$gray-200: #e9ecef;
+$gray-500: #fbfcfe;
+$gray-400: #ebebeb;
+$gray-600: #939ba3;
+$gray-800: #344050;
+// Additional Shades of gray color
+$light: #f4f4f4;
+$extra-light: #fcfcfc;
+// Notification Colors
+$success: #4baf89;
+$info: #3980eb;
+$info-light: #d9f1fa; //Used in background color of landing screen
+$icon-primary: $secondary; //Used in icon color in sidebar and landing screen
+$warning: #ffab58;
+$danger: #f14d4d;
+$notification-colors: (
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "error": $danger
+);
+$white: #ffffff;
+$dark: #414042;
+$black: #000000;
+// Dedicated for button text only
+$btn-text-primary: $primary;
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+    "gray": $gray,
+    "light": $light,
+    "accent": $accent,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "gray-light": $gray-400,
+    "dark": $dark,
+    "white": $white
+);
+// Body Background
+$body-bg: #f5f6f7;
+$body-color: $dark;
+$secondary-bg: #f9f9f9;
+// Box Shadow
+$box-shadow: 0 0.2rem 1rem rgba($black, 0.15);
+// Border
+$border-color: $gray-400;
+// global outline
+$outline: rgba($secondary, 0.25) auto;
+// Form
+$input-bg: $white;
+$input-focus-bg: $input-bg;
+$input-focus-border-color: $primary;
+
+$input-focus-box-shadow: 0 0 0 0.2rem rgba($secondary, 0.25);
+$custom-control-indicator-focus-box-shadow: 0 0 0 0.2rem rgba($primary, 0.5);
+// Tab
+$nav-tabs-link-active-bg: $white;
+$nav-tabs-link-active-color: $primary;
+// Card
+$card-border-color: $border-color;
+// Custom scrollbar
+$custom-scrollbar-thumb-color: lighten($gray, 10%);
+$custom-scrollbar-thumb-hover-color: lighten($gray, 5%);
+$custom-scrollbar-track-color: rgba($black, 0.08);
+$sidebar-scrollbar-thumb-color: darken($gray, 10%);
+$sidebar-scrollbar-thumb-hover-color: darken($gray, 5%);
+// Breadcrumbs
+$breadcrumb-bg: transparent;
+$breadcrumb-divider-color: $gray;
+$breadcrumb-active-color: $primary;
+// Accordion
+$accordion-header-bg: $white;
+$accordion-header-active-bg: $light;
+// Seller Dashboard --> Menu Tiles
+$menu-tiles-bg: $primary-light;
+$menu-tiles-hover-bg: $primary;
+// Multiselect List Used Item
+$list-item-used-color: $danger;
+// Sidebar
+$menu-toggle-bg: $white;
+$success-light: #d1e8e3;
+// $form-check-input-bg: $primary;
+$form-check-label-color: $gray;
+// $min-contrast-ratio: 7;
+$warning-status: #fcb62e; // for status In progress
+$grey-status: #6d7a8c; //  on hold status
+$info-dark: #327cec;
+
+// Styles for date picker

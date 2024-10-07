@@ -1,0 +1,30 @@
+<main id="wrapper">
+    <div class="d-flex login-container">
+        <section class="left-section p-3">
+            <h3 class="mb-3">Login to your account</h3>
+            <form [formGroup]="loginForm">
+                <div class="form-group py-3">
+                    <label for="userEmail" class="form-label fw-semibold">Email <span
+                            class="text-danger">*</span></label>
+                    <input type="email" id="userEmail" placeholder="Enter Email" class="form-control" formControlName="email" />
+                </div>
+                <div class="form-group py-3">
+                    <label for="userPassword" class="form-label fw-semibold">Password <span
+                            class="text-danger">*</span></label>
+                    <input type="password" id="userPassword" placeholder="Enter Password" class="form-control" formControlName="password"/>
+                </div>
+                <div class="pt-3">
+                    <button class="btn btn-primary w-100" type="submit" title="Login" [disabled]="loginForm.invalid" (click)="login()">Login</button>
+                </div>
+                <div>
+                    <!-- <button class="btn btn-link py-3 ps-0">Forgot Password?</button>
+                    <button class="btn btn-link py-3 ps-0" [routerLink]="['/register']">Create on Account</button> -->
+                </div>
+            </form>
+        </section>
+        <section class="right-section">
+            <img src="assets/images/Group 1295.png" alt="Login image" class="login-img">
+        </section>
+    </div>
+</main>
+

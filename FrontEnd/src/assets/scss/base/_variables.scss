@@ -1,0 +1,150 @@
+$body-bg: #f7f7f7;
+$primary: #56a0bd;
+$gray: #8a8c83;
+$gray-200: #e6e6e6;
+$gray-300: #dee2e6;
+$gray-600: #1a1a1a;
+$white: #ffffff;
+$light: #f4f4f4;
+$extra-light: #fcfcfc;
+$dashboard-primary: #086fba;
+$secondary: #004e7d;
+$dark: #414042;
+$black: #000000;    
+
+$border-radius: 0.375rem;
+$border-radius-lg: 1rem;
+$fw-semi-bold: 600;
+
+//
+
+$font-family-base: "Raleway", sans-serif;
+$headings-font-family: "Montserrat", sans-serif;
+$font-size-base: 0.9rem;
+$font-size-xl: 1.25rem;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 700;
+$font-weight-bold: 900;
+$font-weight-base: 600;
+$headings-line-height: 1.4;
+$font-size-md: 0.875rem;
+$font-size-sm: 0.75rem;
+
+$enable-validation-icons: false;
+$component-active-bg: $secondary;
+// Transition
+$transition-base: all 0.4s ease-in-out;
+// Close
+$close-font-size: $font-size-base * 0.8;
+$close-font-weight: $font-weight-normal;
+// Label
+$label-margin-bottom: 0.2rem;
+// Buttons + Forms
+$input-btn-font-size: $font-size-base * 0.875;
+$input-btn-padding-y: 0.5rem;
+$btn-text-primary: $primary;
+// Input - Form control
+$input-border-width: 1px;
+$input-default-width: 100%;
+$custom-control-spacer-x: 0;
+// Buttons
+$btn-font-size: $font-size-base - 0.1;
+$btn-font-weight: $font-weight-base;
+$btn-border-radius: 4px;
+$btn-padding-x: 1rem;
+// menu
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+$menu-text: $primary;
+// modal
+$zindex-modal-backdrop: 99;
+// Tab
+$nav-tabs-border-width: 0;
+$nav-tabs-border-radius: 0;
+// Card
+$card-border-radius: 10px;
+// Breadcrumbs
+$breadcrumb-font-size: $font-size-base;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-padding-y: 0;
+$breadcrumb-padding-x: 0;
+$breadcrumb-item-padding: 0.3rem;
+// Dropdown
+$dropdown-min-width: 12em;
+$dropdown-link-hover-bg: $light;
+$dropdown-link-active-color: $white;
+// Borde radius
+$border-radius-lg: 0.5rem;
+/* ===============================
+      Create Custom variables
+================================== */
+
+// Header - Topbar
+$topbar-height: 60px;
+$topbar-height-sm: 55px;
+// Icon Variations
+$icon-sizes: (
+  "1x": 1.2rem,
+  "2x": 1.5rem,
+  "3x": 2rem,
+  "4x": 2.5rem,
+  "5x": 3rem,
+);
+// Right Sidebar
+$right-sidebar-width: 600px;
+$right-sidebar-width-lg: 780px;
+$modal-md: 100%;
+// confirmation-modal
+$confirmation-modal: 450px;
+// Button
+$btn-letter-spacing: 0.4px;
+// Tooltip
+$tooltip-max-width: 250px;
+// Sidebar
+$sidebar-collapse-width: 80px;
+$sidebar-collapse-width-sm: 75px;
+$sidebar-expand-width: 280px;
+$sidebar-expand-width-sm: 250px;
+$sub-menu-min-width: 250px;
+$sub-menu-min-width-sm: 230px;
+// Custom scrollbar
+$custom-scrollbar-width: 7px;
+// Products --> Notes
+$user-image-size: 35px;
+$image-box-shadow: 2px 2px 6px rgba($black, 0.2);
+$user-profile-initial-size: 35px;
+$user-profile-initial-size-sm: 32px;
+$user-profile-initial-box-shadow: 2px 2px 6px rgba($black, 0.2);
+// Stepper
+$stepper-indicator-size: 25px;
+// Notes
+$notes-wrapper-size: 350px;
+// Append Popup
+$append-popup-width: 280px;
+$append-popup-width-lg: 380px;
+$append-popup-width-xl: 500px;
+// Adjustment Area
+$adjustment-area-width: 350px;
+// Accordion
+$accordion-card-margin-bottom: 1em;
+$accordion-padding-x: 1rem;
+$accordion-padding-y: 0.75rem;
+$accordion-header-font-size: $font-size-base;
+// Loss Code Book Panel
+$loss-code-panel-collapse-width: 80px;
+$form-text-font-size: 14px;
+// Used for contrast of buttons
+$min-contrast-ratio: 2.5; // Light shades
+$form-check-input-width: 1.125em;
+$form-label-color: $gray;
+$input-border-width: 1px;
+$user-initial-width: 60px;
+$user-initial-height: 60px;
+$portal-card-width: 85px;
+$portal-card-height: 85px;
+// checkbox
+$form-check-input-checked-bg-color: $secondary;
+$form-check-input-checked-border-color: $secondary;
+$form-feedback-font-size: $font-size-sm;

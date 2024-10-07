@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+  color: $gray-600;
+  margin: 0;
+  padding: 0;
+}
+.left-section {
+  background-color: $body-bg;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 50%;
+}
+.login-img {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.flex-1 {
+  flex-grow: 1;
+}
+.right-section {
+  border-radius: 10px;
+  width: 50%;
+}
+.right-section img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  overflow: hidden;
+}
+#wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffd270;
+}
+
+label {
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+}
+
+.overflow-vertical {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.disabled,
+:disabled {
+  cursor: not-allowed;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
+// Custom scrollbar style for Mozilla
+* {
+  scrollbar-color: $custom-scrollbar-thumb-color $custom-scrollbar-track-color;
+  scrollbar-width: thin;
+}
+
+// Custom scrollbar style for Chrome and Edge
+
+/* width */
+
+::-webkit-scrollbar {
+  width: $custom-scrollbar-width;
+  height: $custom-scrollbar-width;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: $custom-scrollbar-track-color;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: $custom-scrollbar-thumb-color;
+  border-radius: 30px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: $custom-scrollbar-thumb-hover-color;
+}
+
+// Iframe
+iframe {
+  border: 0;
+}
+
+// FullScreen Content
+.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $white;
+  z-index: 99;
+}
+
+.word-break {
+  word-break: break-all;
+}
+
+.pointer-event-none {
+  pointer-events: none;
+  cursor: no-drop !important;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.disable-upload {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.Draft {
+  color: rgb(238, 238, 22) !important;
+}
+
+.Submit {
+  color: green !important;
+}
+
+.disable-section {
+  background-color: #f3f4f6;
+  pointer-events: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.add-document-wrapper {
+  // width: 330px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  border: 2px dashed $border-color;
+}
+
+.info-value {
+  font-size: 0.9675rem !important;
+}
+
+.info-label {
+  font-size: 0.9675rem !important;
+}
+
+.custom-font {
+  font-size: 0.9675rem !important;
+}
+
+.custom-border {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125) !important;
+}
+
+.custom-color {
+  color: #747b81 !important;
+}
+
+.Status {
+  margin-right: 10px;
+}
+
+.gray {
+  color: #6e595980 !important;
+}
+
+.head-padding {
+  padding: 0 !important;
+}
+
+.audit-color {
+  color: #747b81 !important;
+}
+
+.custom-log-modal {
+  width: 75% !important;
+  height: 100% !important;
+}
+
+.form-overlay {
+  width: 650px !important;
+  height: 100% !important;
+}
+
+.custom-log-backdrop {
+  justify-content: end !important;
+}
+
+.custom-log-header {
+  background: white !important;
+}
+
+.detail-data {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.label-detail {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+}
+
+.log-button-color {
+  color: #ffffff !important;
+  background-color: #0c9eda !important;
+  border-color: #0c9eda !important;
+}
+
+.disabled-section {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.disableField {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.border-bottom-transparent {
+  border-bottom: 1px solid transparent;
+}
+
+.font-weight-semibold {
+  font-weight: 600;
+}
+
+.overlay,
+.sidebar-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}
+
+.email-id-text {
+  color: $gray-600;
+}
+
+.icon-sidebar-sm {
+  font-size: 20px;
+
+  &.icon-Union-1 {
+    font-size: 28px;
+  }
+}
+
+/**Disable upload section */
+.disableSection {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+//   Classes for status
+
+.in-progress {
+  $warning-status: #fcb62e; // for status In progress
+}
+
+.hold-status {
+  $grey-status: #6d7a8c; //  on hold status
+}
+
+.received-status {
+  $info-dark: #327cec;
+}
+
+.status-dropdown {
+  width: 200px;
+}
+
+.roadside-dropdown {
+  width: 200px;
+}
+
+.contract-dropdown {
+  width: 250px;
+}
+
+.multiselect-option .is-selected:first-child {
+  background-color: $white !important;
+}
+
+.multiselect-caret {
+  cursor: pointer !important;
+}
+
+.more-action {
+  min-width: fit-content !important;
+}
+
+.custom-product-overlay {
+  max-width: 600px !important;
+}
+
+.model-sm {
+  width: 470px !important;
+}
+
+// Status HOver overlay
+.status-overlay {
+  background-color: $white;
+  list-style-type: none;
+  transition: 0.4s all;
+  padding: 0.5rem 0;
+  margin-bottom: 0;
+
+  li {
+    padding: 0.5rem 0.75rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $gray-200;
+    }
+
+    &.selected,
+    &:active {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+}
+
+.v-popper {
+  > span {
+    position: relative;
+    padding-right: 20px;
+
+    &:after {
+      content: "\e907";
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-family: "font-icons";
+    }
+  }
+}
+.form-text{
+  font-size: 12px;
+  font-weight: 600;
+  color: #000000 !important;
+}
+.info-icon-wrapper {
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $border-color;
+}

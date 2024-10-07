@@ -1,0 +1,38 @@
+// Data table properties (common property used in all tables)
+.data-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+
+  .cell {
+    // Styles for table heading
+    &-header {
+      font-size: $font-size-base * 0.8125;
+      padding: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    // Styles for table body
+    &-body {
+      padding: 0.75rem;
+      font-size: 13px;
+      border-bottom: 1px solid $border-color;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+  }
+}
+
+.sticky-table-header th {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: $white;
+}
+.no-record-img{
+  width: 150px;
+}

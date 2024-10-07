@@ -1,0 +1,14 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\bin\Release\net8.0\Identity.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\bin\Release\net8.0\Identity.runtimeconfig.json
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\bin\Release\net8.0\Identity.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\bin\Release\net8.0\Identity.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\Identity.csproj.AssemblyReference.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\Identity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\Identity.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\Identity.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\Identity.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\Identity.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\refint\Identity.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\Identity.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\Identity.genruntimeconfig.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Core\Identity\obj\Release\net8.0\ref\Identity.dll

@@ -1,0 +1,155 @@
+<div class="flex-grow-1 d-flex flex-column h-100 overflow-hidden">
+  <header class="d-flex pb-3">
+    <h5>Algo Details</h5>
+    <aside class="flex-grow-1 d-flex justify-content-end align-items-center">
+      <div class="d-flex flex-wrap page-toolbar__actions me-2">
+        <div class="page-toolbar__search-box">
+          <input type="text" class="form-control" id="searchBox" placeholder="Search Here" [(ngModel)]="searchText" />
+          <label for="searchBox" class="fa fa-search" id="searchBox"></label>
+        </div>
+      </div>
+      <div>
+        <button class="btn btn-primary d-flex align-items-center" type="button" title="Add" [routerLink]="['./add']">
+          <span class="d-flex flex-column align-items-center fi-rr-square-plus me-2"></span>
+          Add
+        </button>
+      </div>
+    </aside>
+  </header>
+  <div class="flex-grow-1 overflow-vertical bg-white">
+    <div class="table-wrapper data-table">
+      <table class="data-table windshield-list" aria-describedby="claim table">
+        <thead class="sticky-table-header border-bottom">
+          <tr>
+            <th scope="col" class="serial-no">
+              <div class="cell-header">
+                <span> Date</span>
+              </div>
+            </th>
+            <th scope="col" class="serial-no">
+              <div class="cell-header">
+                <span> Exchange</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Script</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Type</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>OPTION</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Strike Price (Call / Other)</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Strike Price (PUT)</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Expiry</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>No of Lots</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Multiple</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Status</span>
+              </div>
+            </th>
+            <!-- <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Markup</span>
+              </div>
+            </th> -->
+
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Action</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr>
+            <td class="cell-body serial-no">09-07-2024</td>
+            <td class="cell-body">NSE</td>
+            <td class="cell-body">NIFTY</td>
+            <td class="cell-body">DERIVATIVE</td>
+            <td class="cell-body">OPTIDX</td>
+            <td class="cell-body">24500</td>
+            <td class="cell-body">24700</td>
+            <td class="cell-body">26-09-2024</td>
+            <td class="cell-body">2</td>
+            <td class="cell-body">1</td>
+            <td class="cell-body">In-Progress</td>
+            <td class="cell-body">
+              <button class="btn btn-transparent p-0 me-2" type="button" (click)="edit(1)">
+                <span class="fa fa-pencil text-info"></span>
+              </button>
+              <button class="btn btn-transparent p-0" type="button" (click)="delete(1)">
+                <span class="fa fa-trash text-danger"></span>
+              </button>
+            </td>
+          </tr> -->
+          <tr *ngFor="let item of userAlgoData | serch : searchText; let i = index">
+            <td class="cell-body serial-no">{{item.workingDate | date:'dd-MM-yyyy' }}</td>
+            <td class="cell-body">{{item.exchange}}</td>
+            <td class="cell-body">{{item.symbol}}</td>
+            <td class="cell-body">{{item.type}}</td>
+            <td class="cell-body">{{item.instrument}}</td>
+            <td class="cell-body">{{item.callStrikePrice}}</td>
+            <td class="cell-body">{{item.putStrikePrice}}</td>
+            <td class="cell-body">{{item.expiryDate | date:'dd-MM-yyyy' }}</td>
+            <td class="cell-body">{{item.noOfLots}}</td>
+            <td class="cell-body">{{item.multiple}}</td>
+            <td class="cell-body">{{item.status}}</td>
+            <td class="cell-body">
+              <button
+                class="btn btn-transparent p-0 me-2"
+                type="button"
+              >
+                <span class="fa fa-pencil text-info"></span>
+              </button>
+              <button
+                class="btn btn-transparent p-0"
+                type="button"
+              >
+                <span class="fa fa-trash text-danger"></span>
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="userAlgoData?.length == 0">
+            <td colspan="10">
+              <div class="d-flex flex-column align-items-center py-3">
+                <div class="no-record-img ">
+                  <img src="../../../assets/images/no-data.svg" alt="No record found" class="img-fluid">
+                </div>
+                <h4 class="text-primary mb-0 pt-3">No Record Found</h4>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

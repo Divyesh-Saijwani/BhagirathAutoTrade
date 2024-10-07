@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\AlgoBhagirath.Server.props" />
+</Project>

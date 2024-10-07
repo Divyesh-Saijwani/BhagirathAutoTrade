@@ -1,0 +1,111 @@
+// Custom Base SCSS Files
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-straight/css/uicons-bold-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-straight/css/uicons-thin-straight.css');
+@import url('https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+
+@import "assets/scss/base/index";
+// Add Bootstrap files here
+@import "assets/scss/vendor/bootstrap";
+$theme-green: $primary;
+
+$theme-list: ('green': $theme-green,
+) !default;
+
+
+// style for ng multi-select input
+.multiselect-dropdown {
+  font-size: $input-font-size;
+
+  .dropdown-btn {
+    position: relative;
+    height: $input-height;
+    border: 1px solid #ced4da !important;
+    border-radius: 0 !important;
+    font-size: $input-font-size;
+    font-weight: $input-font-weight !important;
+
+    // arrow element span
+    .dropdown-down,
+    .dropdown-up {
+      display: none !important;
+    }
+
+    // stytle for badge which appears on check inside input box
+    .selected-item {
+      background: $primary !important;
+      border: 1px solid $primary !important;
+      padding: 0 5px !important;
+    }
+
+    &:focus {
+      border: 1px solid $primary !important;
+    }
+
+    &:after {
+      position: absolute;
+      top: 6px;
+    }
+  }
+}
+
+// style for list in ng-multiselect-dropdown
+.dropdown-list {
+  margin-top: 0 !important;
+  border: 1px solid $primary !important;
+  border-top: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+
+  .no-data {
+    h5 {
+      font-size: 15px;
+    }
+  }
+}
+
+// style for ng-multiselect-dropdown checkbox
+.multiselect-item-checkbox {
+  input[type=checkbox] {
+    &+div {
+      color: $secondary !important;
+      font-size: 14px;
+
+      &:before {
+        width: 16px !important;
+        height: 16px !important;
+        color: $primary;
+        border: 1px solid $primary !important;
+        animation: none !important;
+      }
+    }
+
+    &:checked {
+      &+div {
+        &:before {
+          background: $primary !important;
+        }
+      }
+    }
+  }
+}
+@import "../node_modules/@ng-select/ng-select/scss/default.theme.scss";
+//Add Custom/Override components style here
+@import "assets/scss/components/index";
+// Components
+// Add Layout style here
+@import "assets/scss/layouts/index";
+// Add Utilities style
+// @import "assets/scss/utilities/index";
+// Vue Notification style
+// @import "assets/scss/vendor/toast-notification";
+// date picker lib
+@import '../node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss'
+// @import '~node_modules/ngx-bootstrap/datepicker/bs-datepicker.scss';
+

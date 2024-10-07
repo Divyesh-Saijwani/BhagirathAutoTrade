@@ -1,0 +1,50 @@
+<!-- Modal used to open form in any module -->
+<div class="modal-backdrop">
+    <div class="d-flex flex-column overflow-hidden bg-white form-modal-wrapper">
+        <header class="bg-primary d-flex align-items-center justify-content-between rounded-0 p-2">
+            <h5 class="text-white mb-0">{{config.title}}</h5>
+            <button class="btn btn-transparent" type="button" title="Close" (click)="onCancel()">
+                <span class="fa fa-close text-white font-lg"></span>
+            </button>
+        </header>
+        <ng-content></ng-content>
+        <!-- <section class="flex-grow-1 modal-body overflow-vertical p-3">
+            <form>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="firstName" class="form-label fw-semibold">First Name <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" id="firstName" placeholder="First Name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="firstName" class="form-label fw-semibold">Last Name <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" id="firstName" placeholder="Last Name" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="firstName" class="form-label fw-semibold">Email <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" id="firstName" placeholder="Email" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="firstName" class="form-label fw-semibold">Phone <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" id="firstName" placeholder="Enter Phone Number" class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section> -->
+        <footer class="d-flex justify-content-end border-top p-3">
+            <button class="btn btn-gray me-3" type="button" title="Cancel" (click)="onCancel()">Cancel</button>
+            <button class="btn btn-primary" type="button" title="Save" (click)="onSubmit()">Save</button>
+        </footer>
+    </div>
+</div>

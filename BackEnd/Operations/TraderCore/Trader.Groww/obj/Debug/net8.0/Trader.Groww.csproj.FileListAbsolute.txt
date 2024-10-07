@@ -1,0 +1,11 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\bin\Debug\net8.0\Trader.Groww.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\bin\Debug\net8.0\Trader.Groww.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\bin\Debug\net8.0\Trader.Groww.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\obj\Debug\net8.0\Trader.Groww.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\obj\Debug\net8.0\Trader.Groww.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\obj\Debug\net8.0\Trader.Groww.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\obj\Debug\net8.0\Trader.Groww.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\obj\Debug\net8.0\Trader.Groww.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\obj\Debug\net8.0\refint\Trader.Groww.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\obj\Debug\net8.0\Trader.Groww.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Groww\obj\Debug\net8.0\ref\Trader.Groww.dll

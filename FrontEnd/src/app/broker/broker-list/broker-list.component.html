@@ -1,0 +1,117 @@
+<div class="flex-grow-1 d-flex flex-column h-100 overflow-hidden">
+    <header class="d-flex pb-3">
+      <h5>Broker Details</h5>
+      <aside class="flex-grow-1 d-flex justify-content-end align-items-center">
+        <div class="d-flex flex-wrap page-toolbar__actions me-2">
+          <div class="page-toolbar__search-box">
+            <input type="text" class="form-control" id="searchBox" placeholder="Search Here" [(ngModel)]="searchText" />
+            <label for="searchBox" class="fa fa-search" id="searchBox"></label>
+          </div>
+        </div>
+        <div>
+          <button class="btn btn-primary d-flex align-items-center" type="button" title="Add" [routerLink]="['./add']">
+            <span class="d-flex flex-column align-items-center fi-rr-square-plus me-2"></span>
+            Add
+          </button>
+        </div>
+      </aside>
+    </header>
+    <div class="flex-grow-1 overflow-vertical bg-white">
+      <div class="table-wrapper data-table">
+        <table class="data-table windshield-list" aria-describedby="claim table">
+          <thead class="sticky-table-header border-bottom">
+            <tr>
+              <th scope="col" class="serial-no">
+                <div class="cell-header">
+                  <span> ID</span>
+                </div>
+              </th>
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Name</span>
+                </div>
+              </th>
+              <!-- <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Contact No</span>
+                </div>
+              </th>
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Address</span>
+                </div>
+              </th>
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>User Groups</span>
+                </div>
+              </th>
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Roles</span>
+                </div>
+              </th>
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Email</span>
+                </div>
+              </th> -->
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Status</span>
+                </div>
+              </th>
+  
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Action</span>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of brokerList | serch : searchText; let i = index">
+              <td class="cell-body serial-no">{{ i + 1 }}</td>
+              <td class="cell-body">{{ item.name }}</td>
+              <!-- <td class="cell-body">{{ item.contactNo }}</td>
+              <td class="cell-body">{{ item.address }}</td>
+              <td class="cell-body">{{ item.userGroup }}</td>
+              <td class="cell-body">{{ item.role }}</td>
+              <td class="cell-body">{{ item.email }}</td> -->
+              <td class="cell-body">
+                <span class="badge" ngClass="item.isActive ? 'badge-success' : 'badge-secondary'">
+                    {{ item.isActive ? 'Active' : 'Inactive' }}
+                </span>
+            </td>
+              <td class="cell-body">
+                <button
+                  class="btn btn-transparent p-0 me-2"
+                  type="button"
+                  (click)="edit(item.brokerId)"
+                >
+                  <span class="fa fa-pencil text-info"></span>
+                </button>
+                <button
+                  class="btn btn-transparent p-0"
+                  type="button"
+                  (click)="delete(item.brokerId)"
+                >
+                  <span class="fa fa-trash text-danger"></span>
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="brokerList?.length == 0">
+              <td colspan="10">
+                <div class="d-flex flex-column align-items-center py-3">
+                  <div class="no-record-img ">
+                    <img src="../../../assets/images/no-data.svg" alt="No record found" class="img-fluid">
+                  </div>
+                  <h4 class="text-primary mb-0 pt-3">No Record Found</h4>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

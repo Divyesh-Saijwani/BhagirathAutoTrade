@@ -1,0 +1,43 @@
+<input type="checkbox" id="sidebarToggle" class="d-none" />
+<aside
+  class="d-flex flex-column h-100 overflow-hidden sidebar-wrapper bg-white shadow-sm"
+>
+  <header class="sidebar-header position-relative">
+    <figure class="brand-logo-lg mb-0">
+      <img
+        src="../../assets/images/brand-logo-lg.jpg"
+        alt="Brand Logo"
+        class="img-fluid border-bottom p-3"
+      />
+    </figure>
+    <figure class="brand-logo-sm mb-0 border-bottom p-3">
+      <img
+        src="../../assets/images/brand-logo-sm.png"
+        alt="Brand Logo"
+        class="img-fluid"
+      />
+    </figure>
+  </header>
+  <div class="flex-grow-1 overflow-vertical nav-list-wrapper">
+    <ul class="nav-list ps-0">
+      <li
+        class="nav-item"
+        *ngFor="let item of sidebarList"
+        [title]="item.menuTitle"
+      >
+      <!-- *ngIf="authService.hasAnyRequiredRole(item.roles)" -->
+        <a
+          [routerLink]="item.menuLink"
+          routerLinkActive="active"
+          class="nav-link"
+          
+        >
+          <div class="nav-icon">
+            <span [ngClass]="item.iconClass"></span>
+          </div>
+          <span class="item-name"> {{ item.menuTitle }}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>

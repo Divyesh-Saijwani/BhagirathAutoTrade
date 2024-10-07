@@ -1,0 +1,354 @@
+
+<div class="flex-grow-1 d-flex flex-column h-100 overflow-hidden p-3">
+    <div class="flex-grow-1 d-flex flex-column h-100 overflow-hidden">
+        <header class="d-flex pb-3">
+          <h5>Algo Dashboard</h5>
+          <aside class="flex-grow-1 d-flex justify-content-end align-items-center">
+            <div class="d-flex flex-wrap page-toolbar__actions me-2">
+              <div class="page-toolbar__search-box">
+                <input type="text" class="form-control" id="searchBox" placeholder="Search Here" value="Icici Direct" disabled />
+              </div>
+            </div>
+            <div>
+              <button class="btn btn-primary d-flex align-items-center" type="button" title="Add" [routerLink]="['./add']">
+                <span class="d-flex flex-column align-items-center fa fa-search"></span>
+                &nbsp; Change
+              </button>
+            </div>
+          </aside>
+        </header> 
+        <div class="flex-grow-1 overflow-vertical bg-white">
+          <div *ngIf="this.broker && this.broker.brokerConfigurations && this.broker.brokerConfigurations.length > 0" class="alert alert-danger" role="alert">
+            There are some {{this.broker.name}} configurations that need to be updated daily. Click on <a href='{{broker.authenticationUrl}}' target="_blank">Login</a> To continue...
+          </div>
+        <div class="container" *ngIf="isAdmin" >
+            <div class="row pt-3" style="display: none;">
+                <div class="col-lg-4">
+                  <div class="card ">
+                    <div class="card-body">
+                      <h5>NIFTY</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>BANKNIFTY</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5>FINNIFTY</h5>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="col-lg-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Broker Details</h5>
+                      <div>Broker Name : {{broker.name}}</div>
+                    </div>
+                  </div>
+                </div> -->
+            </div>
+            <section class="multi-gainer-search   Contact_us">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <!--<span>
+                      <label style="display:inline;font-weight:bold"> {{valueofcalculation}}</label>
+                    </span>-->
+                    <!--<span>
+                      <label style="display:inline;float:right;">{{mstsndmsts}}</label>
+                    </span>-->            
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Exchange</label>
+                      <select class="form-control form-select-lg" [(ngModel)]="equitydata.Exchange" (ngModelChange)="onExchangeChange()">
+                        <option value="" disabled selected>Select Exchange</option>
+                        <option value="NSE">NSE</option>
+                        <!-- <option value="BSE">BSE</option> -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Type</label>
+                      <select class="form-control form-select-lg" [(ngModel)]="equitydata.Type" (ngModelChange)="onTypeOptionUpdate()">
+                        <option value="" disabled selected>Select Type</option>
+                        <!-- <option value="EQ" selected="selected">EQ</option> -->
+                        <option value="DERIVATIVE">DERIVATIVE</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-3" *ngIf="derivativeoption">
+                    <div class="form-group">
+                      <label>Instrument</label>
+                      <select class="form-control form-select-lg" [(ngModel)]="equitydata.Instrument" (ngModelChange)="onInstrumentOptionUpdate()">
+                        <option value="" disabled selected>Select Instrument</option>
+                        <option value="FUTIDX">FUTIDX</option>
+                        <!-- <option value="FUTIVX">FUTIVX</option>
+                        <option value="FUTSTK">FUTSTK</option> -->
+                        <!-- <option value="OPTIDX">OPTIDX</option> -->
+                        <!-- <option value="OPTSTK">OPTSTK</option> -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-2" *ngIf="optidxstxoption">
+                    <div class="form-group">
+                      <label>Option Type</label>
+                      <select class="form-control form-select-lg" [(ngModel)]="equitydata.OptionType" (ngModelChange)="enableSymbolSearch()">
+                        <option value="XX" selected>XX</option>
+                        <!-- <option value="CE">CE</option>
+                        <option value="PE">PE</option> -->
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Symbol</label>
+                      <mat-form-field>
+                        <input type="text" placeholder="Symbol" matInput [matAutocomplete]="auto" [formControl]="searchControl" [(ngModel)]="equitydata.Symbol" (click)="fetchOptions()">
+                        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onOptionSelected($event)">
+                          <mat-option *ngFor="let option of filteredOptions" [value]="option">
+                            {{ option }}
+                          </mat-option>
+                        </mat-autocomplete>
+                      </mat-form-field>
+                    </div>
+                  </div>
+                  <div class="col-md-2" *ngIf="derivativeoption">
+                    <div class="form-group">
+                      <label>Expiry</label>
+                      <select class="form-control form-select-lg mt-1" [(ngModel)]="equitydata.ExpiryDate" (ngModelChange)="onDateOrExpiryChange()">
+                        <option *ngFor="let option of expiryDates" [value]="option">{{ option }}</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="row mt-5">
+                  
+                  <!-- <div class="col-md-2">
+                    <div class="form-group">
+                      <label>Date</label>
+                      <input type="date" [(ngModel)]="equitydata.WorkingDate" class="form-control form-control-lg mt-1" (ngModelChange)="onDateOrExpiryChange()" [max]="currentDate" />
+                    </div>
+                  </div> -->
+                  <div class="row">
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-6 col-xs-6 col-6">
+                      <div class="box">
+                        <h2>
+                          <input type="text" class="form-control" [(ngModel)]="equitydata.SS" id="SS" name="SS" #SS="ngModel">
+                        </h2>
+                        <span title="Support">SS</span>
+                      </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-4 col-4">
+                      <div class="box">
+                        <h2>
+                          <input type="time" class="form-control" id="SST" name="SST" [(ngModel)]="equitydata.SST" #SST="ngModel">
+                        </h2>
+                        <span data-toggle="tooltip" title="Support Time">SST</span>
+                      </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-4 col-4">
+                      <div class="box">
+                        <h2>
+                          <input type="text" class="form-control" id="RS" name="RS" [(ngModel)]="equitydata.RS" #RS="ngModel">
+                        </h2>
+                        <span data-toggle="tooltip" title="Resistance">RS</span>
+                      </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-4 col-4">
+                      <div class="box">
+                        <h2>
+                          <input type="time" class="form-control" id="RST" name="RST" [(ngModel)]="equitydata.RST" #RST="ngModel">
+                        </h2>
+                        <span data-toggle="tooltip" title="Resistance Time">RST</span>
+                      </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-4 col-4">
+                      <div class="box">
+                        <h2>
+                          <input type="text" class="form-control" id="HS" name="HS" [(ngModel)]="equitydata.HS" #HS="ngModel">
+                        </h2>
+                        <span data-toggle="tooltip" title="HS">HS</span>
+                      </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-xs-4 col-4">
+                      <div class="box">
+                        <h2>
+                          <input type="text" class="form-control" id="HR" name="HR" [(ngModel)]="equitydata.HR" #HR="ngModel">
+                        </h2>
+                        <span data-toggle="tooltip" title="HR">HR</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </section>
+            
+            <hr />
+            
+            <section class="multi-gainer-Calculate">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="bg">
+                      
+            
+                      <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                          <!-- <button class="btn btn-lg btn-success mb-2" (click)="downloadExcel()">Calculate</button>
+                          <a #downloadLink style="display: none;"></a> -->
+                          <button class="btn btn-success" (click)="ngCalculateEquity()" data-toggle="modal">Calculate Now</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+            
+              </div>
+            </section>
+            <div> <hr> </div>
+            
+          </div>
+          <div class="row">
+            <div class="px-4 py-5" id="featured-3">
+              <h2 class="pb-2 border-bottom">Today's Claculations</h2>
+              <div class="flex-grow-1 overflow-vertical bg-white">
+                <div class="table-wrapper data-table">
+                  <table class="data-table windshield-list" aria-describedby="claim table">
+                    <thead class="sticky-table-header border-bottom">
+                      <tr>
+                        <th scope="col" class="serial-no">
+                          <div class="cell-header">
+                            <span> #</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="serial-no">
+                          <div class="cell-header">
+                            <span> Exchange</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Script</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Type</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Instrument</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>OPTION</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Strike Price</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Trend</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Expiry</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Side</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Entry Points</span>
+                          </div>
+                        </th>
+                        <!-- <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Markup</span>
+                          </div>
+                        </th> -->
+            
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Stop Loss</span>
+                          </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                          <div class="cell-header">
+                            <span>Target</span>
+                          </div>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let item of calculationList; let i = index">
+                        <td class="cell-body serial-no">{{ i + 1 }}</td>
+                        <td class="cell-body">{{ item.exchange }}</td>
+                        <td class="cell-body">{{ item.symbol }}</td>
+                        <td class="cell-body">{{ item.type }}</td>
+                        <td class="cell-body">{{ item.instrument }}</td>
+                        <td class="cell-body">{{ item.optionType }}</td>
+                        <td class="cell-body">{{ item.strikePrice }}</td>
+                        <td class="cell-body">{{ item.trend }}</td>
+                        <td class="cell-body">{{ item.expiry | date:'dd-MM-yyyy' }}</td>
+                        <td class="cell-body">{{ item.direction }}</td>
+                        <td class="cell-body">
+                          <span *ngIf="item.lowPoint" class="badge text-bg-success rounded-pill">{{item.lowPoint}} </span>&nbsp;
+                          <span *ngIf="item.averagePoint" class="badge text-bg-warning rounded-pill">{{item.averagePoint}}</span>&nbsp;
+                          <span *ngIf="item.maxPoint" class="badge text-bg-info rounded-pill">{{item.maxPoint}}</span>
+                        </td>
+                        <td class="cell-body">
+                          <span class="badge text-bg-danger rounded-pill">{{item.stopLoss}}</span>
+                        </td>
+                        <td class="cell-body">
+                          <span class="badge text-bg-success rounded-pill">{{item.target}}</span>
+                        </td>
+                      </tr>
+                      <tr *ngIf="calculationList?.length == 0">
+                        <td colspan="10">
+                          <div class="d-flex flex-column align-items-center py-3">
+                            <div class="no-record-img ">
+                              <img src="../../../assets/images/no-data.svg" alt="No record found" class="img-fluid">
+                            </div>
+                            <h4 class="text-primary mb-0 pt-3">No Record Found</h4>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        </div>
+
+    <!-- <div>
+        <span class="fa fa-wrench text-primary me-3" style="font-size: 40px;"></span>
+    </div>
+    <h1 class="mb-0">Page Under Construction</h1> -->
+
+</div>
+    

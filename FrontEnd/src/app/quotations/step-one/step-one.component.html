@@ -1,0 +1,508 @@
+<section class="d-flex flex-column h-100 overflow-hidden px-3">
+  <div class="flex-grow-1 overflow-vertical bg-white p-3">
+    <!-- <div
+      class="d-flex flex-column h-100 align-items-center justify-content-center overflow-hidden"
+    >
+      <h1 class="pb-3">Select an action</h1>
+      <div class="row">
+        <div class="col-12 col-md-6" [routerLink]="['/users/add']">
+          <div class="card bg-light shadow-sm">
+            <div>
+              <div class="card-icon-wrapper mx-auto">
+                <span class="card-icons fi fi-tr-registration-paper"></span>
+              </div>
+              <h3 class="text-nowrap text-center text-primary py-3">
+                Create New Profile
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" [routerLink]="['/quotation/load-profile']">
+          <div class="card bg-light shadow-sm">
+            <div>
+              <div class="card-icon-wrapper mx-auto">
+                <span class="card-icons fi fi-tr-user-gear"></span>
+              </div>
+              <h3 class="text-nowrap text-center text-primary py-3">
+                Load existing profile
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- new code that has tabs -->
+
+    <nav class="quotation-tab-wrapper">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="general-tab" data-bs-toggle="tab" data-bs-target="#nav-general"
+          type="button" role="tab" aria-controls="nav-general" aria-selected="true">General</button>
+        <button class="nav-link" id="status-tab" data-bs-toggle="tab" data-bs-target="#nav-status" type="button"
+          role="tab" aria-controls="nav-status" aria-selected="false">Status</button>
+        <button class="nav-link" id="quote-tab" data-bs-toggle="tab" data-bs-target="#nav-quote" type="button"
+          role="tab" aria-controls="nav-quote" aria-selected="false">Quote</button>
+        <button class="nav-link" id="contacts-tab" data-bs-toggle="tab" data-bs-target="#nav-contacts" type="button"
+          role="tab" aria-controls="nav-contacts" aria-selected="false">Contacts</button>
+        <button class="nav-link" id="others-tab" data-bs-toggle="tab" data-bs-target="#nav-others" type="button"
+          role="tab" aria-controls="nav-others" aria-selected="false">Other</button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <!-- Add form Section -->
+      <div class="tab-pane fade show active" id="nav-general" role="tabpanel" aria-labelledby="general-tab">
+        <div class="row pt-4 pb-3">
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="customerName" class="form-label fw-semibold my-0">Customer </label>
+              <p class="form-text">Brijesh Patel</p>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="tagJobName" class="form-label fw-semibold my-0">Enter Tag / Job Name</label>
+              <input type="text" class="form-control" placeholder="Tag / Job Name">
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="leadSource" class="form-label fw-semibold">Select User Group</label>
+              <ng-select formControlName="leadSource" placeholder="Select Lead Source" appendTo="body"
+                [clearable]="false">
+              </ng-select>
+            </div>
+          </div>
+        </div>
+        <div class="row pt-4 pb-3">
+          <div class="col-12 col-md-4 mb-3">
+            <label for="type" class="form-label fw-semibold">Type</label>
+            <div class="form-group">
+              <input id="installed" type="radio" name="custom-radio-btn1">
+              <label class="custom-radio" for="installed"></label>
+              <label for="installed" class="cursor-pointer ps-1">Installed</label>
+            </div>
+            <div class="form-group">
+              <input id="supply-only" type="radio" name="custom-radio-btn1">
+              <label class="custom-radio" for="supply-only"></label>
+              <label for="supply-only" class="cursor-pointer ps-1">Supply Only</label>
+            </div>
+            <div class="form-group">
+              <input id="supply-delivered" type="radio" name="custom-radio-btn1">
+              <label class="custom-radio" for="supply-delivered"></label>
+              <label for="supply-delivered" class="cursor-pointer ps-1">Supply & Delivered</label>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <label for="type" class="form-label fw-semibold">Viewed From</label>
+            <div class="form-group">
+              <input id="outside" type="radio" name="custom-radio-btn1">
+              <label class="custom-radio" for="outside"></label>
+              <label for="outside" class="cursor-pointer ps-1">Outside</label>
+            </div>
+            <div class="form-group">
+              <input id="inside" type="radio" name="custom-radio-btn1">
+              <label class="custom-radio" for="inside"></label>
+              <label for="inside" class="cursor-pointer ps-1">Inside</label>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="multiplier" class="form-label fw-semibold my-0">Multiplier</label>
+              <input type="text" class="form-control" placeholder="Enter Multiplier">
+            </div>
+          </div>
+        </div>
+        <div class="row pt-4 pb-3 align-items-end">
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="default-wall-depth" class="form-label fw-semibold">Default Wall Depth</label>
+              <div class="d-flex align-items-center">
+                <input type="text" class="form-control w-25">
+                <span class="mx-2">mm /</span>
+                <input type="text" class="form-control w-25">
+                <span class="ms-2">"</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="discount-item-level" class="form-label fw-semibold">Discounts at Item Level</label>
+              <input id="discount-item-level" class="ms-2" type="checkbox" name="custom-checkbox-btn1">
+              <label class="custom-checkbox" for="discount-item-level"></label>
+            </div>
+          </div>
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="show-panel-layout" class="form-label fw-semibold">Show Panel Layouts</label>
+              <input id="show-panel-layout" class="ms-2" type="checkbox" name="custom-checkbox-btn1">
+              <label class="custom-checkbox" for="show-panel-layout"></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row pt-4 pb-3">
+          <div class="table-wrapper data-table">
+            <table class="data-table border">
+              <thead class="sticky-table-header border-bottom">
+                <tr>
+                  <th scope="col">
+                    <div class="cell-header">
+                      <span>Include</span>
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="cell-header">
+                      <span>Primary</span>
+                    </div>
+                  </th>
+                  <th scope="col">
+                    <div class="cell-header">
+                      <span>Name</span>
+                    </div>
+                  </th>
+                  <th scope="col" class="vendor">
+                    <div class="cell-header">
+                      <span>Mail</span>
+                    </div>
+                  </th>
+                  <th scope="col" class="vendor">
+                    <div class="cell-header">
+                      <span>Title</span>
+                    </div>
+                  </th>
+                  <th scope="col" class="vendor">
+                    <div class="cell-header">
+                      <span>Mobile</span>
+                    </div>
+                  </th>
+                  <th scope="col" class="vendor">
+                    <div class="cell-header">
+                      <span>Office</span>
+                    </div>
+                  </th>
+                  <th scope="col" class="vendor">
+                    <div class="cell-header">
+                      <span>Action</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell-body">
+                    <input type="checkbox" name="custom-checkbox-1">
+                    <label class="custom-radio"></label>
+                  </td>
+                  <td class="cell-body">
+                    <input type="radio" name="custom-radio-1">
+                    <label class="custom-radio"></label>
+                  </td>
+                  <td class="cell-body">
+                    <a href="#">Brijesh Patel</a>
+                  </td>
+                  <td class="cell-body">
+                    <a href="mailto:Bpatel@norewindoes.com">{{"Bpatel@norewindoes.com"}}</a>
+                  </td>
+                  <td class="cell-body"></td>
+                  <td class="cell-body"></td>
+                  <td class="cell-body"></td>
+                  <td class="cell-body">
+                    <button class="btn btn-transparent p-0 me-2" type="button">
+                      <span class="fa fa-pencil text-info"></span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="row pt-4 pb-3">
+          <!-- General -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="fullName" class="form-label fw-semibold my-0">Quote </label>
+              <p class="form-text">10305 (Created <b>May 4 2024</b> by Komalpreet kaur)
+              </p>
+            </div>
+          </div>
+          <!-- Order -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="fullName" class="form-label fw-semibold my-0">Order</label>
+              <input type="text" class="form-control" placeholder="Set Price Holds">
+            </div>
+          </div>
+          <!-- Customer -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group mb-2">
+              <label for="customer" class="form-label fw-semibold my-0">Customer</label>
+              <div>
+                <p class="mb-1">Navi Renovation LTD.</p>
+                <address>
+                  5724 Temple Drive, Alberta<br>
+                  587-000-9979
+                </address>
+              </div>
+            </div>
+          </div>
+          <!-- Radio buttons -->
+          <div class="col-12 col-md-4 mb-3">
+            <label for="" class="form-label fw-semibold my-0">Type</label>
+            <div>
+              <div class="custom-radio-wrap">
+                <div class="form-group me-2">
+                  <input id="installed" type="radio" name="custom-radio-btn1">
+                  <label class="custom-radio" for="installed"></label>
+                  <label for="installed" class="cursor-pointer ps-1">Installed</label>
+                </div>
+                <div class="form-group me-2">
+                  <input id="supportOnly" type="radio" name="custom-radio-btn1">
+                  <label class="custom-radio" for="supportOnly"></label>
+                  <label for="supportOnly" class="cursor-pointer ps-1">Support Only</label>
+                </div>
+                <div class="form-group me-2">
+                  <input id="suppliedAndDelivered" type="radio" name="custom-radio-btn1">
+                  <label class="custom-radio" for="suppliedAndDelivered"></label>
+                  <label for="suppliedAndDelivered" class="cursor-pointer ps-1">Supplied and Delivered</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Customer Job Name/Tag -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group mb-2">
+              <label for="customerJobName" class="form-label fw-semibold my-0">Customer Job Name/Tag</label>
+              <input type="text" class="form-control" placeholder="Set Price Holds" id="customerJobname">
+            </div>
+          </div>
+          <!-- Ship to Address -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group mb-2">
+              <label for="customer" class="form-label fw-semibold my-0">Customer</label>
+              <div>
+                <p class="mb-1">Navi Renovation LTD.</p>
+                <address>
+                  5724 Temple Drive, Alberta<br>
+                  587-000-9979
+                </address>
+              </div>
+            </div>
+          </div>
+          <!-- Footer save button -->
+          <div class="d-flex justify-content-end px-3 border-bottom">
+            <button class="btn btn-primary px-5 mb-3" title="Save">Save</button>
+          </div>
+        </div>
+      </div>
+      <!-- Status Section -->
+      <div class="tab-pane fade" id="nav-status" role="tabpanel" aria-labelledby="status-tab">
+        <div class="row pt-4 pb-3">
+          <!-- Ordered -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="fullName" class="form-label fw-semibold mb-0">Ordered<span
+                  class="text-danger">*</span></label>
+
+              <p class="form-text mb-0">24-05-2024
+              </p>
+            </div>
+          </div>
+
+          <!-- Progress -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="fullName" class="form-label fw-semibold">Progress<span class="text-danger">*</span></label>
+              <p class="form-text mb-0">Keep a dropdown here
+              </p>
+            </div>
+          </div>
+          <!-- Purchase order -->
+          <div class="col-12 col-md-4 mb-3">
+            <div class="form-group">
+              <label for="fullName" class="form-label fw-semibold">Customer Purchase Order</label>
+              <p class="form-text mb-0">24-05-2024
+              </p>
+            </div>
+          </div>
+          <!-- Is order on hold -->
+          <div class="col-12 col-md-4">
+            <label for="" class="form-label fw-semibold">Order is on hold</label>
+            <div class="d-flex align-items-center">
+              <div class="me-3">
+                <input class="styled-checkbox" id="option1" type="checkbox" value="value4">
+              </div>
+              <div class="me-3">
+                <input type="text" class="form-control" placeholder="Status Note">
+              </div>
+            </div>
+          </div>
+          <!-- Shop Tag -->
+          <div class="col-12 col-md-4">
+            <div class="form-group mb-3">
+              <label for="shopTag" class="form-label fw-semibold">Shop Tag</label>
+              <input type="text" class="form-control" placeholder="Enter Number" id="shopTag" />
+            </div>
+
+          </div>
+          <!-- Ready -->
+          <div class="col-12 col-md-4">
+            <label for="shopTag" class="form-label fw-semibold">Ready?</label>
+            <div>
+              <button class="btn btn-outline-primary" type="button" title="Modify Ready">Modify Ready</button>
+            </div>
+          </div>
+          <!-- Shop Orders -->
+          <div class="col-12 col-md-4">
+            <label for="shopTag" class="form-label fw-semibold">Shop Orders</label>
+            <div>
+              <button class="btn btn-outline-secondary" type="button" title="Add Shop Orders">Add Shop Orders</button>
+            </div>
+          </div>
+          <!-- Driver -->
+          <div class="col-12 col-md-4">
+            <label for="shopTag" class="form-label fw-semibold">Driver</label>
+            <div>
+              <button class="btn btn-outline-secondary" type="button" title="Modify Delivery">Modify Delivery</button>
+            </div>
+          </div>
+          <!-- Required -->
+          <div class="col-12 col-md-4">
+            <div class="form-group mb-3">
+              <label for="startDatePicker" class="form-label fw-semibold">Required</label>
+              <input type="text" class="form-control" placeholder="Enter Date picker here" id="startDatePicker" />
+            </div>
+
+          </div>
+          <!-- Invoiced -->
+          <div class="col-12 col-md-4">
+            <div class="form-group mb-3">
+              <label for="startDatePicker" class="form-label fw-semibold">Invoiced</label>
+              <input type="text" class="form-control" placeholder="Enter Date picker here" id="startDatePicker" />
+            </div>
+
+          </div>
+          <!-- Delivery Done -->
+          <div class="col-12 col-md-4">
+            <label for="shopTag" class="form-label fw-semibold">Delivery Done</label>
+            <div>
+              <button class="btn btn-outline-secondary" type="button" title="Modify Completion">Modify
+                Completion</button>
+            </div>
+          </div>
+          <!-- Cancel Reason  -->
+          <div class="col-12 col-md-4">
+            <label for="shopTag" class="form-label fw-semibold">Cancel Reason</label>
+            <div>
+              <button class="btn btn-outline-secondary" type="button" title="Cancel Order">Cancel Order
+              </button>
+            </div>
+          </div>
+          <!-- Ship Distribution -->
+          <div class="col-12 col-md-4 mb-3">
+            <label for="" class="form-label fw-semibold my-0">Ship Distribution</label>
+            <div>
+              <div class="custom-radio-wrap">
+                <div class="form-group me-2">
+                  <input id="allTogeather" type="radio" name="custom-radio-btn1">
+                  <label class="custom-radio" for="allTogeather"></label>
+                  <label for="allTogeather" class="cursor-pointer ps-1">All Togeather</label>
+                </div>
+                <div class="form-group me-2">
+                  <input id="framesAsap" type="radio" name="custom-radio-btn1">
+                  <label class="custom-radio" for="framesAsap"></label>
+                  <label for="framesAsap" class="cursor-pointer ps-1">Frames ASAP</label>
+                </div>
+                <div class="form-group me-2">
+                  <input id="screensAndHardware" type="radio" name="custom-radio-btn1">
+                  <label class="custom-radio" for="screensAndHardware"></label>
+                  <label for="screensAndHardware" class="cursor-pointer ps-1">Screens and Hardware later</label>
+                </div>
+                <div class="form-group me-2">
+                  <input id="seeNotes" type="radio" name="custom-radio-btn1">
+                  <label class="custom-radio" for="seeNotes"></label>
+                  <label for="seeNotes" class="cursor-pointer ps-1">See Note</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- footer button for section 2 -->
+          <div class="d-flex justify-content-end px-3 border-bottom">
+            <button class="btn btn-primary px-5 mb-3" title="Save">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Section 3 :  Quote -->
+    <div class=" tab-pane fade" id="nav-quote" role="tabpanel" aria-labelledby="quote-tab">
+      <div class="row pt-4 pb-3">
+        <!-- Viewed From -->
+        <div class="col-12 col-md-4 mb-3">
+          <label for="" class="form-label">Viewed from</label>
+          <p class="">Outside</p>
+        </div>
+        <!-- Multiplier -->
+        <div class="col-12 col-md-4 mb-3">
+          <label for="multiplier" class="form-label">Multiplier</label>
+          <input type="text" class="form-control" placeholder="Enter Multiplier value" />
+        </div>
+        <!-- Sub total -->
+        <div class="col-12 col-md-4 mb-3">
+          <label for="subtotal" class="form-label">Sub Total</label>
+          <input type="text" class="form-control" placeholder="Enter subtotal value" />
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-contacts" role="tabpanel" aria-labelledby="contacts-tab">
+      <div class="pt-4 pb-3">
+        <section class="table-wrapper data-table">
+          <table class="data-table w-100">
+            <thead class="sticky-table-header border-bottom">
+              <tr>
+                <th>Include</th>
+                <th>Primary</th>
+                <th>Name</th>
+                <th>Mail</th>
+                <th>Title</th>
+                <th>Mobile</th>
+                <th>Office</th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="cell-body">
+                  <div>
+                    <input class="styled-checkbox" id="option1" type="checkbox" value="value4">
+                  </div>
+                </td>
+                <td class="cell-body">
+                  <div class="form-group me-2">
+                    <input id="stock" type="radio" name="custom-radio-btn1">
+                    <label class="custom-radio" for="stock"></label>
+                  </div>
+                </td>
+                <td class="cell-body">
+                  <span>John Doe</span>
+                </td>
+                <td class="cell-body">
+                  <span>John.com</span>
+                </td>
+                <td class="cell-body">Demo Title can be added here</td>
+                <td class="cell-body">888-776-1212</td>
+                <td class="cell-body">-</td>
+                <td class="cell-body">
+                  <span class="fa fa-pencil"></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="nav-others" role="tabpanel" aria-labelledby="others-tab">Others
+    </div>
+  </div>
+
+</section>

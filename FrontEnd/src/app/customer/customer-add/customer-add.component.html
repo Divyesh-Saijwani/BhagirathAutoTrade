@@ -1,0 +1,736 @@
+<app-overlay [config]="inputConfig" (cancel)="onCancel()" (submit)="onSubmit()">
+  <!-- <section class="flex-grow-1 modal-body overflow-vertical p-3">
+      <form [formGroup]="userFormGroup">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="form-group py-3">
+              <label for="fullName" class="form-label fw-semibold"
+                >Full Name <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                id="fullName"
+                placeholder="Full Name"
+                class="form-control"
+                formControlName="fullName"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group py-3">
+              <label for="contactNo" class="form-label fw-semibold"
+                >Contact No <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                id="contactNo"
+                placeholder="Contact No"
+                class="form-control"
+                formControlName="contactNo"
+                appPhoneMask
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group py-3">
+              <label for="" class="form-label fw-semibold">Select User Group</label>
+              <ng-select
+                [items]="userGroupsData"
+                formControlName="userGroup"
+                placeholder="Select User Groups"
+                appendTo="body"
+                [clearable]="false"
+                [bindLabel]="userGroupsData.label"
+                [bindValue]="userGroupsData.value"
+                (change)="changeUserGroup($event)"
+              >
+              </ng-select>
+            </div>
+          </div>
+          <div class="col-12 col-md-6" >
+            <div class="form-group py-3">
+              <label for="" class="form-label fw-semibold">Select Roles</label>
+              <ng-select
+                [items]="roleLists"
+                formControlName="role"
+                [clearable]="false"
+                placeholder="Select User Groups"
+                appendTo="body"
+                [bindLabel]="roleLists.label"
+                [bindValue]="roleLists.value"
+              >
+              </ng-select>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group py-3">
+              <label for="email" class="form-label fw-semibold"
+                >Email <span class="text-danger">*</span></label
+              >
+              <input
+                type="text"
+                id="email"
+                placeholder="Email"
+                class="form-control"
+                formControlName="email"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-group py-3">
+              <label for="password" class="form-label fw-semibold"
+                >Password <span class="text-danger">*</span></label
+              >
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                class="form-control"
+                formControlName="password"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-md-6" >
+            <div class="form-group py-3">
+              <label for="address" class="form-label fw-semibold"
+                >Business Address <span class="text-danger">*</span></label
+              >
+              <textarea
+                id="address"
+                placeholder="Enter address"
+                class="form-control"
+                formControlName="address"
+              ></textarea>
+            </div>
+          </div>
+          <div class="col-12 col-md-6" *ngIf="isBuilder">
+            <div class="form-group py-3">
+              <label for="Markup" class="form-label fw-semibold"
+                >Markup <span class="text-danger">*</span></label
+              >
+              <input
+                type="Markup"
+                id="Markup"
+                placeholder="Enter Markup"
+                class="form-control"
+                formControlName="markup"
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+    </section> -->
+
+  <section class="flex-grow-1 modal-body overflow-vertical p-3">
+    <nav class="overlay-tabs">
+      <div class="nav nav-tabs border-bottom" id="nav-tab" role="tablist">
+        <button
+          class="nav-link active"
+          id="nav-home-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-home"
+          type="button"
+          role="tab"
+          aria-controls="nav-home"
+          aria-selected="true"
+        >
+          Identity
+        </button>
+        <button
+          class="nav-link"
+          id="nav-profile-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#nav-profile"
+          type="button"
+          role="tab"
+          aria-controls="nav-profile"
+          aria-selected="false"
+        >
+          Quoting
+        </button>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent" [formGroup]="customerFormGroup">
+      <!-- Tab 1  -->
+      <div
+        class="tab-pane fade show active"
+        id="nav-home"
+        role="tabpanel"
+        aria-labelledby="nav-home-tab"
+      >
+        <form formGroupName="identity">
+          <div class="row">
+            <!-- Name -->
+            <div class="col-12">
+              <div class="form-group py-3">
+                <label for="fullName" class="form-label fw-semibold"
+                  >Full Name <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="fullName"
+                  placeholder="Full Name"
+                  class="form-control"
+                  formControlName="fullName"
+                />
+              </div>
+            </div>
+            <!-- Address -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="form-group py-3">
+                <label for="address" class="form-label fw-semibold"
+                  >Address <span class="text-danger">*</span></label
+                >
+                <textarea
+                  id="address"
+                  placeholder="Enter address"
+                  class="form-control"
+                  formControlName="address"
+                ></textarea>
+              </div>
+            </div>
+            <!-- City -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="form-group py-3">
+                <label for="city" class="form-label fw-semibold"
+                  >City <span class="text-danger">*</span></label
+                >
+                <input
+                  tpye="text"
+                  id="city"
+                  placeholder="Enter City"
+                  class="form-control"
+                  formControlName="city"
+                />
+              </div>
+            </div>
+            <!-- Province/ State: Todo add state list here -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="" class="form-label fw-semibold"
+                  >Select State/Province</label
+                >
+                <ng-select
+                  [items]="userGroupsData"
+                  formControlName="userGroup"
+                  placeholder="Select State/Provinces"
+                  appendTo="body"
+                  [clearable]="false"
+                  [bindLabel]="userGroupsData.label"
+                  [bindValue]="userGroupsData.value"
+                  (change)="changeUserGroup($event)"
+                >
+                </ng-select>
+              </div>
+            </div>
+            <!-- Country -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="" class="form-label fw-semibold"
+                  >Select Country
+                </label>
+                <ng-select
+                  [items]="userGroupsData"
+                  formControlName="userGroup"
+                  placeholder="Select Country"
+                  appendTo="body"
+                  [clearable]="false"
+                  [bindLabel]="userGroupsData.label"
+                  [bindValue]="userGroupsData.value"
+                  (change)="changeUserGroup($event)"
+                >
+                </ng-select>
+              </div>
+            </div>
+            <!-- Postal Code -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="form-group py-3">
+                <label for="postalCode" class="form-label fw-semibold"
+                  >Postal Code<span class="text-danger">*</span></label
+                >
+                <input
+                  tpye="text"
+                  id="postalCode"
+                  placeholder="Enter Postal Code"
+                  class="form-control"
+                  formControlName="postalCode"
+                />
+              </div>
+            </div>
+            <!-- Stop Notifications -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="col-12 col-md-6 mt-3">
+                <label for="" class="form-label fw-semibold"
+                  >Stop Notifications</label
+                >
+                <div class="d-flex align-items-center">
+                  <div class="me-3">
+                    <input
+                      class="styled-checkbox"
+                      id="stopNotifications"
+                      type="checkbox"
+                      value="value4"
+                    />
+                    <label for="stopNotifications"
+                      >Donot send order progress notifications</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Branch (To do Add dropdown) -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="branch" class="form-label fw-semibold"
+                  >Branch</label
+                >
+                <ng-select
+                  [items]="userGroupsData"
+                  formControlName="userGroup"
+                  placeholder="Branch"
+                  appendTo="body"
+                  [clearable]="false"
+                  [bindLabel]="userGroupsData.label"
+                  [bindValue]="userGroupsData.value"
+                  (change)="changeUserGroup($event)"
+                >
+                </ng-select>
+              </div>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="contactNo" class="form-label fw-semibold"
+                  >Contact <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="contactNo"
+                  placeholder="Enter Contact"
+                  class="form-control"
+                  formControlName="contactNo"
+                  appPhoneMask
+                />
+              </div>
+            </div>
+            <!-- Email -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="email" class="form-label fw-semibold"
+                  >Email <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="Email"
+                  class="form-control"
+                  formControlName="email"
+                />
+              </div>
+            </div>
+            <!-- Phone list -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="phoneOne" class="form-label fw-semibold"
+                  >Phone 1 <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="phoneOne"
+                  placeholder="Enter Phone"
+                  class="form-control"
+                  formControlName="phoneOne"
+                  appPhoneMask
+                />
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="phoneTwo" class="form-label fw-semibold"
+                  >Phone 2<span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="phoneTwo"
+                  placeholder="Enter Phone"
+                  class="form-control"
+                  formControlName="phoneTwo"
+                  appPhoneMask
+                />
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="phoneThree" class="form-label fw-semibold"
+                  >Phone 3<span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="phoneThree"
+                  placeholder="Enter Phone"
+                  class="form-control"
+                  formControlName="phoneThree"
+                  appPhoneMask
+                />
+              </div>
+            </div>
+            <!-- Fax -->
+            <div class="col-12 col-md-6 mb-2">
+              <div class="form-group py-3">
+                <label for="postalCode" class="form-label fw-semibold"
+                  >Fax<span class="text-danger">*</span></label
+                >
+                <input
+                  tpye="number"
+                  id="postalCode"
+                  placeholder="Enter Fax"
+                  class="form-control"
+                  formControlName="fax"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- Tab 2 -->
+      <div
+        class="tab-pane fade"
+        id="nav-profile"
+        role="tabpanel"
+        aria-labelledby="nav-profile-tab"
+      >
+        <form>
+          <div class="row">
+            <!-- Quote type default -->
+            <div class="col-12 col-md-6 mt-3">
+              <label class="form-label fw-semibold">Quote Type Default</label>
+              <div class="custom-radio-wrap d-flex mb-1">
+                <div class="form-group me-2">
+                  <input
+                    id="quoteTypeInstalled"
+                    type="radio"
+                    name="custom-radio-btn1"
+                  />
+                  <label class="custom-radio" for="quoteTypeInstalled"></label>
+                  <label for="quoteTypeInstalled" class="cursor-pointer ps-1"
+                    >Installed</label
+                  >
+                </div>
+                <div class="form-group me-2">
+                  <input id="supplied" type="radio" name="custom-radio-btn1" />
+                  <label class="custom-radio" for="supplied"></label>
+                  <label for="supplied" class="cursor-pointer ps-1"
+                    >Supplied</label
+                  >
+                </div>
+                <div class="form-group">
+                  <input id="delivered" type="radio" name="custom-radio-btn1" />
+                  <label class="custom-radio" for="delivered"></label>
+                  <label for="delivered" class="cursor-pointer ps-1"
+                    >Delivered</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Signature line -->
+            <div class="col-12 col-md-6 mt-3">
+              <label for="" class="form-label fw-semibold"
+                >Signature Line
+              </label>
+              <div class="d-flex align-items-center">
+                <div class="me-3">
+                  <input
+                    class="styled-checkbox"
+                    id="option1"
+                    type="checkbox"
+                    value="value4"
+                  />
+                  <label for="option1">Signature Line</label>
+                </div>
+              </div>
+            </div>
+            <!-- Price Multiplier -->
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="priceMultiplier" class="form-label fw-semibold"
+                  >Price Multiplier<span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="priceMultiplier"
+                  placeholder="Enter Price Multiplier"
+                  class="form-control"
+                  formControlName="priceMultiplier"
+                />
+              </div>
+            </div>
+            <!-- Default Factor 1 Installed -->
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label
+                  for="defaultFactorInstalled"
+                  class="form-label fw-semibold"
+                  >Default Factor 1 Installed<span class="text-danger"
+                    >*</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="defaultFactorInstalled"
+                  placeholder="Enter Default Factor 1 Installed"
+                  class="form-control"
+                  formControlName="defaultFactorInstalled"
+                />
+              </div>
+            </div>
+            <!-- Default Reason 1 Installed -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label
+                  for="defaultReasonInstalled"
+                  class="form-label fw-semibold"
+                  >Default Reason 1 Installed
+                  <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="defaultReasonInstalled"
+                  placeholder="Default Reason 1 Installed"
+                  class="form-control"
+                  formControlName="defaultReasonInstalled"
+                  appPhoneMask
+                />
+              </div>
+            </div>
+            <!-- Default factor 1 Supply Only -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="defaultFactorSupply" class="form-label fw-semibold"
+                  >Default factor 1 Supply Only<span class="text-danger"
+                    >*</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="defaultFactorSupply"
+                  placeholder="Default factor 1 Supply Only"
+                  class="form-control"
+                  formControlName="defaultFactorSupply"
+                  appPhoneMask
+                />
+              </div>
+            </div>
+            <!-- Default Reason 1 Supply Only -->
+            <div class="col-12 col-md-6">
+              <div class="form-group py-3">
+                <label for="defultReason1Supply" class="form-label fw-semibold"
+                  >Default factor 1 Supply Only<span class="text-danger"
+                    >*</span
+                  ></label
+                >
+                <input
+                  type="text"
+                  id="defultReason1Supply"
+                  placeholder="Default factor 1 Supply Only"
+                  class="form-control"
+                  formControlName="defultReason1Supply"
+                  appPhoneMask
+                />
+              </div>
+            </div>
+            <!-- Discount at Item Level -->
+            <div class="col-12 col-md-6 mt-3">
+              <label for="" class="form-label fw-semibold"
+                >Discount at Item Level</label
+              >
+              <div class="d-flex align-items-center">
+                <div class="me-3">
+                  <input
+                    class="styled-checkbox"
+                    id="defaultOnQuotes"
+                    type="checkbox"
+                    value="value5"
+                  />
+                  <label for="defaultOnQuotes">default on quotes</label>
+                </div>
+              </div>
+            </div>
+            <!-- Credit Status -->
+            <div class="col-12 col-md-6">
+              <label class="form-label fw-semibold">Credit Status</label>
+              <div class="row custom-radio-wrap">
+                <div class="form-group col-12 me-2">
+                  <input
+                    id="depositAndPayment  "
+                    type="radio"
+                    name="custom-radio-btn1"
+                  />
+                  <label class="custom-radio" for="depositAndPayment"></label>
+                  <label for="depositAndPayment" class="cursor-pointer ps-1"
+                    >Deposit and payment on completion</label
+                  >
+                </div>
+                <div class="form-group col-12 me-2">
+                  <input id="doNotSell" type="radio" name="custom-radio-btn1" />
+                  <label class="custom-radio" for="doNotSell"></label>
+                  <label for="doNotSell" class="cursor-pointer ps-1"
+                    >Do not sell</label
+                  >
+                </div>
+                <div class="form-group col-12">
+                  <input id="invoice" type="radio" name="custom-radio-btn1" />
+                  <label class="custom-radio" for="invoice"></label>
+                  <label for="invoice" class="cursor-pointer ps-1"
+                    >Invoice</label
+                  >
+                </div>
+                <div class="form-group col-12">
+                  <input
+                    id="paymentOnCompletion"
+                    type="radio"
+                    name="custom-radio-btn1"
+                  />
+                  <label class="custom-radio" for="paymentOnCompletion"></label>
+                  <label for="paymentOnCompletion" class="cursor-pointer ps-1"
+                    >Payment on completion</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- Balance -->
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="balance" class="form-label fw-semibold"
+                  >Balance <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="balance"
+                  placeholder="Enter Balance"
+                  class="form-control"
+                  formControlName="balance"
+                />
+              </div>
+            </div>
+            <!-- Credit Limit -->
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="creditLimit" class="form-label fw-semibold"
+                  >Credit Limit <span class="text-danger">*</span></label
+                >
+                <input
+                  type="text"
+                  id="creditLimit"
+                  placeholder="Enter Credit Limit"
+                  class="form-control"
+                  formControlName="creditLimit"
+                />
+              </div>
+            </div>
+            <!--  Invoice Terms -->
+            <div class="col-12 col-md-6">
+              <div class="form-group">
+                <label for="invoiceTerms" class="form-label fw-semibold"
+                  >Invoice Terms<span class="text-danger">*</span></label
+                >
+                <textarea
+                  id="invoiceTerms"
+                  placeholder="Enter Invoice Terms"
+                  class="form-control"
+                  formControlName="invoiceTerms"
+                ></textarea>
+              </div>
+            </div>
+            <!--  -->
+            <div class="col-12 col-md-6">
+              <label for="creditLimit" class="form-label fw-semibold"
+                >Deposit Required<span class="text-danger">*</span></label
+              >
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  aria-label="Amount (to the nearest dollar)"
+                />
+                <div class="input-group-append">
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-8 py-3">
+              <label for="creditLimit" class="form-label fw-semibold"
+                >Sales</label
+              >
+
+              <table class="data-table border border-bottom-0">
+                <tr>
+                  <td class="border-end p-2">All Time</td>
+                  <td class="border-end p-2">0</td>
+                  <td class="border-end p-2">2024</td>
+                  <td class="border-end p-2">0</td>
+                  <td class="border-end p-2">2023</td>
+                  <td class="p-2">0</td>
+                </tr>
+                <tr>
+                  <td class="border-end p-2">Owing</td>
+                  <td class="border-end p-2">0</td>
+                  <td class="border-end p-2"></td>
+                  <td class="border-end p-2"></td>
+                  <td class="border-end p-2">Pipeline</td>
+                  <td class="p-2">0</td>
+                </tr>
+              </table>
+            </div>
+            <!-- <div class="col-12 col-md-6">
+                <div class="form-group py-3">
+                  <label for="" class="form-label fw-semibold">Select User Group</label>
+                  <ng-select [items]="userGroupsData" formControlName="userGroup" placeholder="Select User Groups"
+                    appendTo="body" [clearable]="false" [bindLabel]="userGroupsData.label"
+                    [bindValue]="userGroupsData.value" (change)="changeUserGroup($event)">
+                  </ng-select>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group py-3">
+                  <label for="" class="form-label fw-semibold">Select Roles</label>
+                  <ng-select [items]="roleLists" formControlName="role" [clearable]="false"
+                    placeholder="Select User Groups" appendTo="body" [bindLabel]="roleLists.label"
+                    [bindValue]="roleLists.value">
+                  </ng-select>
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group py-3">
+                  <label for="email" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+                  <input type="text" id="email" placeholder="Email" class="form-control" formControlName="email" />
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group py-3">
+                  <label for="password" class="form-label fw-semibold">Password <span class="text-danger">*</span></label>
+                  <input type="password" id="password" placeholder="Enter password" class="form-control"
+                    formControlName="password" />
+                </div>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-group py-3">
+                  <label for="address" class="form-label fw-semibold">Business Address <span
+                      class="text-danger">*</span></label>
+                  <textarea id="address" placeholder="Enter address" class="form-control"
+                    formControlName="address"></textarea>
+                </div>
+              </div>
+              <div class="col-12 col-md-6" *ngIf="isBuilder">
+                <div class="form-group py-3">
+                  <label for="Markup" class="form-label fw-semibold">Markup <span class="text-danger">*</span></label>
+                  <input type="Markup" id="Markup" placeholder="Enter Markup" class="form-control"
+                    formControlName="markup" />
+                </div>
+              </div> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</app-overlay>

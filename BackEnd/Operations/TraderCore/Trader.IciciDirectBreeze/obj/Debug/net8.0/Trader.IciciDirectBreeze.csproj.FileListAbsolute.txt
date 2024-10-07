@@ -1,0 +1,11 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\bin\Debug\net8.0\Trader.IciciDirectBreeze.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\bin\Debug\net8.0\Trader.IciciDirectBreeze.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\bin\Debug\net8.0\Trader.IciciDirectBreeze.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\obj\Debug\net8.0\Trader.IciciDirectBreeze.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\obj\Debug\net8.0\Trader.IciciDirectBreeze.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\obj\Debug\net8.0\Trader.IciciDirectBreeze.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\obj\Debug\net8.0\Trader.IciciDirectBreeze.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\obj\Debug\net8.0\Trader.IciciDirectBreeze.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\obj\Debug\net8.0\refint\Trader.IciciDirectBreeze.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\obj\Debug\net8.0\Trader.IciciDirectBreeze.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.IciciDirectBreeze\obj\Debug\net8.0\ref\Trader.IciciDirectBreeze.dll

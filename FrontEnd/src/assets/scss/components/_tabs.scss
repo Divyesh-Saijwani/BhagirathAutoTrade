@@ -1,0 +1,19 @@
+.overlay-tabs {
+  .nav-link {
+    border-left: 0 !important;
+    border-bottom: 3px solid transparent !important;
+    transition: 0.25s ease-in-out;
+    padding: 10px 0;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover,
+    &.active {
+      background-color: rgba(8, 111, 186, 0.1);
+      border-bottom: 3px solid $primary !important;
+      transition: .25s ease-in-out;
+      color: $primary !important;
+    }
+  }
+}

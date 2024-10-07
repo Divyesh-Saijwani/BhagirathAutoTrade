@@ -1,0 +1,123 @@
+<app-overlay [config]="inputConfig" (cancel)="onCancel()" (submit)="onSubmit()">
+  <section class="flex-grow-1 modal-body overflow-vertical p-3">
+    <form [formGroup]="userFormGroup">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="fullName" class="form-label fw-semibold"
+              >Full Name <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Full Name"
+              class="form-control"
+              formControlName="fullName"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="contactNo" class="form-label fw-semibold"
+              >Contact No <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id="contactNo"
+              placeholder="Contact No"
+              class="form-control"
+              formControlName="contactNo"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select User Group</label>
+            <ng-select
+              [items]="userGroupsData"
+              formControlName="userGroup"
+              placeholder="Select User Groups"
+              appendTo="body"
+              [clearable]="false"
+              [bindLabel]="userGroupsData.label"
+              [bindValue]="userGroupsData.value"
+              (change)="changeUserGroup($event)"
+            >
+            </ng-select>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Roles</label>
+            <ng-select
+              [items]="roleLists"
+              formControlName="role"
+              [clearable]="false"
+              placeholder="Select User Groups"
+              appendTo="body"
+              [bindLabel]="roleLists.label"
+              [bindValue]="roleLists.value"
+              [readonly]="true"
+            >
+            </ng-select>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="email" class="form-label fw-semibold"
+              >Email <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              class="form-control"
+              formControlName="email"
+            />
+          </div>
+        </div>
+        <!-- <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="password" class="form-label fw-semibold"
+              >Password <span class="text-danger">*</span></label
+            >
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter password"
+              class="form-control"
+              formControlName="password"
+            />
+          </div>
+        </div> -->
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="address" class="form-label fw-semibold"
+              >Business Address <span class="text-danger">*</span></label
+            >
+            <textarea
+              id="address"
+              placeholder="Enter address"
+              class="form-control"
+              formControlName="address"
+            ></textarea>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" *ngIf="isBuilder">
+          <div class="form-group py-3">
+            <label for="Markup" class="form-label fw-semibold"
+              >Markup <span class="text-danger">*</span></label
+            >
+            <input
+              type="Markup"
+              id="Markup"
+              placeholder="Enter Markup"
+              class="form-control"
+              formControlName="markup"
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+  </section>
+</app-overlay>

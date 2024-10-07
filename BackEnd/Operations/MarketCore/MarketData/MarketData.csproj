@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\AlgoBhagirath.Common\AlgoBhagirath.Common.csproj" />
+    <ProjectReference Include="..\..\..\Core\BhagirathFincareClassLibrary\BhagirathFincareClassLibrary.csproj" />
+    <ProjectReference Include="..\..\..\Core\BhagirathFincareUtil\BhagirathFincareUtil.csproj" />
+    <ProjectReference Include="..\..\..\Core\Contracts\Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

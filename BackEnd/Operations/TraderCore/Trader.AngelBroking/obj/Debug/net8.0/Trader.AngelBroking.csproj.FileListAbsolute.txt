@@ -1,0 +1,11 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\bin\Debug\net8.0\Trader.AngelBroking.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\bin\Debug\net8.0\Trader.AngelBroking.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\bin\Debug\net8.0\Trader.AngelBroking.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\obj\Debug\net8.0\Trader.AngelBroking.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\obj\Debug\net8.0\Trader.AngelBroking.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\obj\Debug\net8.0\Trader.AngelBroking.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\obj\Debug\net8.0\Trader.AngelBroking.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\obj\Debug\net8.0\Trader.AngelBroking.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\obj\Debug\net8.0\refint\Trader.AngelBroking.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\obj\Debug\net8.0\Trader.AngelBroking.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.AngelBroking\obj\Debug\net8.0\ref\Trader.AngelBroking.dll

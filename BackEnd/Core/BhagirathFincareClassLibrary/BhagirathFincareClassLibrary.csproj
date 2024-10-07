@@ -1,0 +1,123 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AssemblyTitle>BhagirathFincareClassLibrary</AssemblyTitle>
+    <Product>BhagirathFincareClassLibrary</Product>
+    <Copyright>Copyright ©  2018</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="Models\BhagirathFinCareEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BhagirathFinCareEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\BhagirathFinCareEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\BhagirathFinCareEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BhagirathFinCareEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Update="Models\C__MigrationHistory.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\ELMAH_Error.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\GetCTLDCTHDData_Result.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\GetHotStockRecursiveUploadData_Result.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\GetPDLPDHData_Result.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\GetTDLTDHData_Result.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Holidays.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\HotStock.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Invoice.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\MarketPrice.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\mv9_varchar_table_Result.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\RecursiveResult.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\RecursiveUpload.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\SuperCallsData.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\UserProfile.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Users.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\webpages_Membership.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\webpages_OAuthMembership.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\webpages_Roles.cs">
+      <DependentUpon>BhagirathFinCareEntities.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="Models\BhagirathFinCareEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BhagirathFinCareEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Update="Models\BhagirathFinCareEntities.edmx.diagram">
+      <DependentUpon>BhagirathFinCareEntities.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Models\BhagirathFinCareEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BhagirathFinCareEntities.edmx</DependentUpon>
+      <LastGenOutput>BhagirathFinCareEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\BhagirathFinCareEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>BhagirathFinCareEntities.edmx</DependentUpon>
+      <LastGenOutput>BhagirathFinCareEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+</Project>

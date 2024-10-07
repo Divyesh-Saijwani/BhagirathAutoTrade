@@ -1,0 +1,161 @@
+﻿public class EquityData
+{
+    public int Id { get; set; }
+    public string Symbol { get; set; }
+    public DateTime? ExpiryDate { get; set; }
+    public string StrikePrice { get; set; }
+    public string OptionType { get; set; }
+    public string Open { get; set; }
+    public string High { get; set; }
+    public string Low { get; set; }
+    public string Cmp { get; set; }
+    public string Close { get; set; }
+    public int FileType { get; set; }
+    public DateTime UploadDateTime { get; set; }
+    public int FileNo { get; set; }
+    public string Average { get; set; }
+    public string TotalTradeValue { get; set; }
+}
+
+public class EquityDetailedData
+{
+    public DateTime? WorkDate { get; set; }
+    public object IDH { get; set; }
+    public string txt_m3 { get; set; }
+    public string txt_U6 { get; set; }
+    public string txt_m4 { get; set; }
+    public string txt_T6 { get; set; }
+    public string txt_m5 { get; set; }
+    public string txt_S6 { get; set; }
+    public string txt_l8 { get; set; }
+    public string txt_R6 { get; set; }
+    public string txt_d8 { get; set; }
+    public string txt_Q6 { get; set; }
+    public string txt_t8 { get; set; }
+    public string txt_P6 { get; set; }
+    public string txt_t10 { get; set; }
+    public string txt_O6 { get; set; }
+    public string txt_d10 { get; set; }
+    public string txt_N6 { get; set; }
+    public string txt_t11 { get; set; }
+    public string txt_M6 { get; set; }
+    public string txt_d11 { get; set; }
+    public string txt_K6 { get; set; }
+    public string txt_q16 { get; set; }
+    public string txt_J6 { get; set; }
+    public string txt_f19 { get; set; }
+    public string txt_I6 { get; set; }
+    public string txt_k8 { get; set; }
+    public string txt_H6 { get; set; }
+    public string txt_m8 { get; set; }
+    public string txt_G6 { get; set; }
+    public string txt_K9 { get; set; }
+    public string txt_F6 { get; set; }
+    public string txt_M9 { get; set; }
+    public string txt_E6 { get; set; }
+    public string txt_K13 { get; set; }
+    public string txt_D6 { get; set; }
+    public string txt_H12 { get; set; }
+    public string txt_K13_not { get; set; }
+    public string txt_I12 { get; set; }
+    public string txt_O12 { get; set; }
+    public string txt_J13 { get; set; }
+    public string txt_N13 { get; set; }
+    public string TextBox1 { get; set; }
+    public object Label15 { get; set; }
+    public string TextBox2 { get; set; }
+    public object Label16 { get; set; }
+    public object strkeprice { get; set; }
+    public string TextBox3 { get; set; }
+    public object txt_reversecall { get; set; }
+    public object txt_reverseBAP { get; set; }
+    public string txt_Buysl { get; set; }
+    public string txt_buyt1 { get; set; }
+    public string txt_buyt2 { get; set; }
+    public string Txt_buyt3 { get; set; }
+    public string Txt_salet3 { get; set; }
+    public string Txt_salet2 { get; set; }
+    public string Txt_salet1 { get; set; }
+    public string Txt_salesl { get; set; }
+    public DateTime? expriydate { get; set; }
+    public object txt_tcreversecall { get; set; }
+    public object txt_BVCBAP { get; set; }
+    public object txt_tcBuysl { get; set; }
+    public object txt_tcbuyt1 { get; set; }
+    public object txt_tcbuyt2 { get; set; }
+    public object txt_tcbuyt3 { get; set; }
+    public object Txt_tcsalet3 { get; set; }
+    public object Txt_tcsalet2 { get; set; }
+    public object Txt_tcsalet1 { get; set; }
+    public object Txt_tcsalesl { get; set; }
+    public object Label60 { get; set; }
+    public object Label45 { get; set; }
+    public object TrendMessage { get; set; }
+    public object IMPResult { get; set; }
+    public object FinalMessage { get; set; }
+    public DateTime WorkingDate { get; set; }
+    public string Companyname { get; set; }
+    public string expirydate { get; set; }
+    public object strikeprice { get; set; }
+    public string Result { get; set; }
+    public string SelectSymbol { get; set; }
+    public object swf { get; set; }
+    public object lwf { get; set; }
+    public string swf1 { get; set; }
+    public string swf2 { get; set; }
+    public string swf3 { get; set; }
+    public string swf4 { get; set; }
+    public string swf5 { get; set; }
+    public string swf6 { get; set; }
+    public string swf7 { get; set; }
+    public string swf8 { get; set; }
+    public string swf9 { get; set; }
+    public string swf10 { get; set; }
+    public string swf11 { get; set; }
+    public string swf12 { get; set; }
+    public string swf13 { get; set; }
+    public string swf14 { get; set; }
+    public string lwf1 { get; set; }
+    public string lwf2 { get; set; }
+    public string lwf3 { get; set; }
+    public string lwf4 { get; set; }
+    public string lwf5 { get; set; }
+    public string lwf6 { get; set; }
+    public string lwf7 { get; set; }
+    public string lwf8 { get; set; }
+    public string lwf9 { get; set; }
+    public string lwf10 { get; set; }
+    public string lwf11 { get; set; }
+    public string lwf12 { get; set; }
+    public string lwf13 { get; set; }
+    public string lwf14 { get; set; }
+    public double Close { get; set; }
+    public double Average { get; set; }
+    public decimal CMP { get; set; }
+    public double Open { get; set; }
+    public double IDL { get; set; }
+    public object MST { get; set; }
+    public object MSTS { get; set; }
+    public object MST2 { get; set; }
+    public object MSTS2 { get; set; }
+    public object TOTALTRADEDVALUE { get; set; }
+    public object TOTTRDVAL { get; set; }
+    public bool IsPresentInHotStock { get; set; }
+
+    public decimal SS { get; set; }
+    public string SST { get; set; }
+    public decimal RS { get; set; }
+    public string RST { get; set; }
+    public decimal HS { get; set; }
+    public decimal HR { get; set; }
+
+
+
+}
+
+public class EquityApiResponse<T>
+{
+    public T Data { get; set; }
+    public string Message { get; set; }
+    public int Success { get; set; }
+}

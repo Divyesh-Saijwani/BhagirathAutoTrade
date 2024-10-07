@@ -1,0 +1,11 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\bin\Debug\net8.0\Trader.Core.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\bin\Debug\net8.0\Trader.Core.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\bin\Debug\net8.0\Trader.Core.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\obj\Debug\net8.0\Trader.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\obj\Debug\net8.0\Trader.Core.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\obj\Debug\net8.0\Trader.Core.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\obj\Debug\net8.0\Trader.Core.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\obj\Debug\net8.0\Trader.Core.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\obj\Debug\net8.0\refint\Trader.Core.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\obj\Debug\net8.0\Trader.Core.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Core\obj\Debug\net8.0\ref\Trader.Core.dll

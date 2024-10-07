@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="160" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Database.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\DIVYE\SOURCE\REPOS\ALGOBHAGIRATH\INFRASTRUCTURE\DATABASE\OBJ\DEBUG\DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\divye\source\repos\AlgoBhagirath\Infrastructure\Database\obj\Debug\Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTableType" Name="[dbo].[ConfigurationsType]">
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlTableTypeSimpleColumn" Name="[dbo].[ConfigurationsType].[BrokerId]">
+						<Property Name="IsNullable" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTableTypeSimpleColumn" Name="[dbo].[ConfigurationsType].[ConfigurationId]">
+						<Property Name="IsNullable" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTableTypeSimpleColumn" Name="[dbo].[ConfigurationsType].[ConfigKey]">
+						<Property Name="IsNullable" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTableTypeSimpleColumn" Name="[dbo].[ConfigurationsType].[ConfigValue]">
+						<Property Name="IsNullable" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlTableTypeSimpleColumn" Name="[dbo].[ConfigurationsType].[NeedsToUpdateDaily]">
+						<Property Name="IsNullable" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Constraints">
+				<Entry>
+					<Element Type="SqlTableTypeDefaultConstraint">
+						<Property Name="DefaultExpressionScript">
+							<Value><![CDATA[0]]></Value>
+						</Property>
+						<Relationship Name="ForColumn">
+							<Entry>
+								<References Name="[dbo].[ConfigurationsType].[NeedsToUpdateDaily]" />
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    SET NOCOUNT ON;
+    BEGIN TRY
+        BEGIN TRANSACTION;
+        
+        -- Check if broker name already exists
+        IF EXISTS (SELECT 1 FROM Broker WHERE Name = @Name)
+        BEGIN
+            RAISERROR ('Broker name already exists.', 16, 1);
+            ROLLBACK TRANSACTION;
+            RETURN;
+        END
+
+        -- Upsert Broker
+        IF EXISTS (SELECT 1 FROM Broker WHERE BrokerId = @BrokerId)
+        BEGIN
+            UPDATE Broker
+            SET
+                Name = @Name,
+                Description = @Description,
+                APIDocumentationUrl = @APIDocumentationUrl,
+                AuthenticationUrl = @AuthenticationUrl,
+                IsActive = @IsActive
+            WHERE BrokerId = @BrokerId;
+        END
+        ELSE
+        BEGIN
+            INSERT INTO Broker (BrokerId, Name, Description, APIDocumentationUrl, AuthenticationUrl, IsActive)
+            VALUES (@BrokerId, @Name, @Description, @APIDocumentationUrl, @AuthenticationUrl, @IsActive);
+        END
+
+        -- Upsert BrokerConfigurations
+        DECLARE @ConfigKey VARCHAR(50), @ConfigValue VARCHAR(50), @NeedsToUpdateDaily BIT, @BrokerConfigurationId UNIQUEIDENTIFIER;
+
+        DECLARE ConfigCursor CURSOR FOR
+        SELECT ConfigKey, ConfigValue, NeedsToUpdateDaily, ConfigurationId as BrokerConfigurationId
+        FROM @Configurations;
+
+        OPEN ConfigCursor;
+        FETCH NEXT FROM ConfigCursor INTO @ConfigKey, @ConfigValue, @NeedsToUpdateDaily, @BrokerConfigurationId;
+
+        WHILE @@FETCH_STATUS = 0
+        BEGIN
+            IF @BrokerConfigurationId IS NOT NULL
+            BEGIN
+                -- Update existing BrokerConfiguration
+                UPDATE BrokerConfiguration
+                SET
+                    ConfigKey = @ConfigKey,
+                    NeedsToUpdateDaily = @NeedsToUpdateDaily
+                WHERE BrokerConfigurationId = @BrokerConfigurationId;
+            END
+            ELSE
+            BEGIN
+                -- Insert new BrokerConfiguration
+                INSERT INTO BrokerConfiguration (BrokerConfigurationId, BrokerId, ConfigKey, NeedsToUpdateDaily)
+                VALUES (NEWID(), @BrokerId, @ConfigKey, @NeedsToUpdateDaily);
+            END
+
+            FETCH NEXT FROM ConfigCursor INTO @ConfigKey, @ConfigValue, @NeedsToUpdateDaily, @BrokerConfigurationId;
+        END;
+
+        CLOSE ConfigCursor;
+        DEALLOCATE ConfigCursor;
+
+        COMMIT TRANSACTION;
+    END TRY
+    BEGIN CATCH
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        -- Return the error message
+        DECLARE @ErrorMessage NVARCHAR(4000), @ErrorSeverity INT, @ErrorState INT;
+        SELECT @ErrorMessage = ERROR_MESSAGE(), @ErrorSeverity = ERROR_SEVERITY(), @ErrorState = ERROR_STATE();
+        RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState);
+    END CATCH
+END;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[bit]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Name]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@BrokerId]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Description]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@APIDocumentationUrl]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@AuthenticationUrl]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@IsActive]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[ConfigKey]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[ConfigValue]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[NeedsToUpdateDaily]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[ConfigurationId]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations]" Disambiguator="4">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[BrokerId]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[ConfigurationId]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[ConfigKey]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Property Name="Length" Value="50" />
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[varchar]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[ConfigValue]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Property Name="Length" Value="50" />
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[varchar]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations].[NeedsToUpdateDaily]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[bit]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@BrokerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Description]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@APIDocumentationUrl]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@AuthenticationUrl]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@IsActive]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateBrokerAndConfigurations].[@Configurations]">
+						<Property Name="IsReadOnly" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[ConfigurationsType]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="3218" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE dbo.usp_AddOrUpdateBrokerAndConfigurations&#xD;&#xA;    @BrokerId UNIQUEIDENTIFIER,&#xD;&#xA;    @Name VARCHAR(100),&#xD;&#xA;    @Description VARCHAR(MAX),&#xD;&#xA;    @APIDocumentationUrl VARCHAR(MAX),&#xD;&#xA;    @AuthenticationUrl VARCHAR(MAX),&#xD;&#xA;    @IsActive BIT,&#xD;&#xA;    @Configurations dbo.ConfigurationsType READONLY&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    DECLARE @UserBrokerId INT;
+
+    -- Check if UserBroker entry already exists
+    IF EXISTS (SELECT 1 FROM UserBroker WHERE UserId = @UserId AND BrokerId = @BrokerId)
+    BEGIN
+        -- Update existing UserBroker entry
+        UPDATE UserBroker
+        SET IsActive = 1
+        WHERE UserId = @UserId AND BrokerId = @BrokerId;
+        
+        -- Get the UserBrokerId of the existing entry
+        SET @UserBrokerId = (SELECT UserBrokerId FROM UserBroker WHERE UserId = @UserId AND BrokerId = @BrokerId);
+    END
+    ELSE
+    BEGIN
+        -- Insert new UserBroker entry and get the new UserBrokerId
+        INSERT INTO UserBroker (UserId, BrokerId, IsActive)
+        OUTPUT INSERTED.UserBrokerId
+        VALUES (@UserId, @BrokerId, 1);
+        
+        -- Set the new UserBrokerId
+        SET @UserBrokerId = SCOPE_IDENTITY();
+    END
+
+    -- Merge the new configurations with existing ones
+    MERGE INTO UserBrokerConfiguration AS target
+    USING @Configurations AS source
+    ON target.UserBrokerId = @UserBrokerId AND target.ConfigKey = source.ConfigKey
+    WHEN MATCHED THEN
+        UPDATE SET target.ConfigValue = source.ConfigValue
+    WHEN NOT MATCHED THEN
+        INSERT (UserBrokerId, ConfigKey, ConfigValue)
+        VALUES (@UserBrokerId, source.ConfigKey, source.ConfigValue);
+END;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@UserId]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@BrokerId]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations].[ConfigKey]" />
+				</Entry>
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations].[ConfigValue]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations]" Disambiguator="3">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations].[BrokerId]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations].[ConfigurationId]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations].[ConfigKey]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Property Name="Length" Value="50" />
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[varchar]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations].[ConfigValue]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Property Name="Length" Value="50" />
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[varchar]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations].[NeedsToUpdateDaily]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[bit]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@BrokerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_AddOrUpdateUserBrokerAndConfigurations].[@Configurations]">
+						<Property Name="IsReadOnly" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References Name="[dbo].[ConfigurationsType]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1460" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE dbo.usp_AddOrUpdateUserBrokerAndConfigurations&#xA;    @UserId INT,&#xA;    @BrokerId INT,&#xA;    @Configurations dbo.ConfigurationsType READONLY&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_Broker_Delete]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    SET NOCOUNT ON;
+
+        -- Attempt to update the IsActive flag
+        UPDATE [dbo].[Broker]
+        SET IsActive = 0
+        WHERE BrokerId = @BrokerId;
+
+END;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_Broker_Delete].[@BrokerId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_Broker_Delete].[@BrokerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="253" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_Broker_Delete]&#xD;&#xA;    @BrokerId VARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_Broker_GetAll]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT BrokerId, Name, Description, APIDocumentationUrl, AuthenticationUrl, IsActive
+    FROM [dbo].[Broker];
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="197" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[usp_Broker_GetAll]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetBrokerAndConfigurations]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        b.BrokerId,
+        b.Name,
+        b.Description,
+        b.APIDocumentationUrl,
+        b.AuthenticationUrl,
+        b.IsActive,
+        bc.BrokerConfigurationId,
+        bc.ConfigKey,
+        bc.NeedsToUpdateDaily
+    FROM
+        Broker b
+    LEFT JOIN
+        BrokerConfiguration bc ON b.BrokerId = bc.BrokerId
+    WHERE
+        b.BrokerId = @BrokerId;
+END;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_GetBrokerAndConfigurations].[@BrokerId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetBrokerAndConfigurations].[@BrokerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="512" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE dbo.usp_GetBrokerAndConfigurations&#xD;&#xA;@BrokerId UNIQUEIDENTIFIER&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetTodayStockCalculations]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    -- Set the date to today's date at midnight
+    DECLARE @TodayStart DATETIME = CAST(GETDATE() AS DATE);
+    -- Set the date to the end of today
+    DECLARE @TodayEnd DATETIME = DATEADD(DAY, 1, @TodayStart);
+
+    SELECT 
+        [AlgoCalculationId],
+        [Symbol],
+        [Exchange],
+        [Type],
+        [Instrument],
+        [OptionType],
+        [StrikePrice],
+        [Expiry],
+        [LowPoint],
+        [AveragePoint],
+        [MaxPoint],
+        [Direction],
+        [EntryTime],
+        [StopLoss],
+        [Target],
+        [CalculationDateTime],
+        [IsActive]
+    FROM 
+        [dbo].[StockCalculation]
+    WHERE 
+        [CalculationDateTime] >= @TodayStart
+        AND [CalculationDateTime] < @TodayEnd
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[datetime]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="823" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [usp_GetTodayStockCalculations]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_GetUserBrokerDetailsForUpdate]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        b.[BrokerId],
+        b.[Name],
+        b.[Description],
+        b.[APIDocumentationUrl],
+        b.[AuthenticationUrl],
+        ub.[UserBrokerId],
+        ub.[UserId],
+        ubc.[UserBrokerConfigurationId],
+        ubc.[ConfigKey] AS UserConfigKey,
+        ubc.[ConfigValue] AS UserConfigValue,
+        ubc.[NeedsToChangeEveryDay],
+        ubc.[LastModifiedDate]
+    FROM 
+        Broker b
+    LEFT JOIN 
+        UserBroker ub ON ub.BrokerId = b.BrokerId
+    LEFT JOIN 
+        UserBrokerConfiguration ubc ON ub.UserBrokerId = ubc.UserBrokerId
+    WHERE 
+        b.BrokerId = @BrokerId
+        AND ub.UserId = @UserId
+        --AND ubc.NeedsToChangeEveryDay = 1
+        AND CAST(ubc.LastModifiedDate AS DATE) <> CAST(GETDATE() AS DATE);
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_GetUserBrokerDetailsForUpdate].[@BrokerId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_GetUserBrokerDetailsForUpdate].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[date]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetUserBrokerDetailsForUpdate].[@BrokerId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_GetUserBrokerDetailsForUpdate].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="936" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE usp_GetUserBrokerDetailsForUpdate&#xD;&#xA;    @BrokerId UNIQUEIDENTIFIER,&#xD;&#xA;    @UserId UNIQUEIDENTIFIER&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[usp_InsertStockCalculation]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    BEGIN TRY
+        DECLARE @NewAlgoCalculationId UNIQUEIDENTIFIER = NEWID();
+
+        INSERT INTO [dbo].[StockCalculation] 
+            ([AlgoCalculationId], [Symbol], [Exchange], [Type], [Instrument], [OptionType], [StrikePrice], [Expiry], 
+             [LowPoint], [AveragePoint], [MaxPoint], [Direction], [EntryTime], [StopLoss], [Target], 
+             [CalculationDateTime], [IsActive])
+        OUTPUT INSERTED.[AlgoCalculationId]
+        VALUES 
+            (@NewAlgoCalculationId, @Symbol, @Exchange, @Type, @Instrument, @OptionType, @StrikePrice, @Expiry, 
+             @LowPoint, @AveragePoint, @MaxPoint, @Direction, @EntryTime, @StopLoss, @Target, 
+             GETDATE(), @IsActive);
+    END TRY
+    BEGIN CATCH
+        -- Handle error
+        DECLARE @ErrorMessage NVARCHAR(4000);
+        DECLARE @ErrorSeverity INT;
+        DECLARE @ErrorState INT;
+
+        SELECT 
+            @ErrorMessage = ERROR_MESSAGE(),
+            @ErrorSeverity = ERROR_SEVERITY(),
+            @ErrorState = ERROR_STATE();
+
+        -- Log the error or handle it as needed
+        RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState);
+    END CATCH
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[uniqueidentifier]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry />
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@Symbol]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@Exchange]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@Type]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@Instrument]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@OptionType]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@StrikePrice]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@Expiry]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@LowPoint]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@AveragePoint]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@MaxPoint]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@Direction]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@EntryTime]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@StopLoss]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@Target]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[usp_InsertStockCalculation].[@IsActive]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@Symbol]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@Exchange]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@Type]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@Instrument]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@OptionType]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="5" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@StrikePrice]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="18" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@Expiry]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@LowPoint]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="18" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@AveragePoint]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="18" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@MaxPoint]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="18" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@Direction]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="10" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@EntryTime]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@StopLoss]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="18" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@Target]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="2" />
+									<Property Name="Precision" Value="18" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[decimal]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[usp_InsertStockCalculation].[@IsActive]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="1656" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [usp_InsertStockCalculation]&#xD;&#xA;    @Symbol VARCHAR(50),&#xD;&#xA;    @Exchange VARCHAR(10),&#xD;&#xA;    @Type VARCHAR(10),&#xD;&#xA;    @Instrument VARCHAR(10),&#xD;&#xA;    @OptionType VARCHAR(5),&#xD;&#xA;    @StrikePrice DECIMAL(18, 2),&#xD;&#xA;    @Expiry DATETIME,&#xD;&#xA;    @LowPoint DECIMAL(18, 2),&#xD;&#xA;    @AveragePoint DECIMAL(18, 2),&#xD;&#xA;    @MaxPoint DECIMAL(18, 2),&#xD;&#xA;    @Direction VARCHAR(10),&#xD;&#xA;    @EntryTime DATETIME,&#xD;&#xA;    @StopLoss DECIMAL(18, 2),&#xD;&#xA;    @Target DECIMAL(18, 2),&#xD;&#xA;    @IsActive BIT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

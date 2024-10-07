@@ -1,0 +1,68 @@
+<app-overlay [config]="inputConfig" (cancel)="onCancel()" (submit)="onSubmit()">
+    <section class="flex-grow-1 modal-body overflow-vertical p-3">
+      <form>
+        <!-- Inventory module -->
+        <div class="row">
+          <!-- Checkbox list -->
+          <div class="col-12 col-md-6">
+            <label for="" class="form-label fw-semibold">Warehouse</label>
+            <div class="d-flex align-items-center">
+              <div class="me-3">
+                <input class="styled-checkbox" id="option1" type="checkbox" value="value4">
+                <label for="option1">Stocked</label>
+              </div>
+              <div class="me-3">
+                <input class="styled-checkbox" id="option2" type="checkbox" value="value4">
+                <label for="option2">Non Stocked</label>
+              </div>
+            </div>
+          </div>
+          <!-- Radio buttons  -->
+          <div class="col-12 col-md-6 mt-3">
+            <label for="" class="form-label fw-semibold">UOM</label>
+            <div class="custom-radio-wrap d-flex">
+              <div class="form-group me-2">
+                <input id="stock" type="radio" name="custom-radio-btn1">
+                <label class="custom-radio" for="stock"></label>
+                <label for="stock" class="cursor-pointer ps-1">Stock</label>
+              </div>
+              <div class="form-group">
+                <input id="usage" type="radio" name="custom-radio-btn1">
+                <label class="custom-radio" for="usage"></label>
+                <label for="usage" class="cursor-pointer ps-1">Usage</label>
+              </div>
+            </div>
+          </div>
+          <!-- Measure -->
+          <div class="col-12 col-md-6 mt-3">
+            <label for="" class="form-label fw-semibold">Measure</label>
+            <div class="custom-radio-wrap d-flex">
+              <div class="form-group me-2">
+                <input id="metric" type="radio" name="custom-radio-btn">
+                <label class="custom-radio" for="metric"></label>
+                <label for="metric" class="cursor-pointer ps-1">Metric</label>
+              </div>
+              <div class="form-group">
+                <input id="imperial" type="radio" name="custom-radio-btn">
+                <label class="custom-radio" for="imperial"></label>
+                <label for="imperial" class="cursor-pointer ps-1">Imperial</label>
+              </div>
+            </div>
+          </div>
+  
+          <div class="col-12 col-md-6">
+            <label for="" class="form-label fw-semibold">Select option</label>
+            <ng-select [items]="yourItems" [multiple]="true" appendTo="body">
+            </ng-select>
+          </div>
+          <div class="col-12 col-md-6">
+            <input type="text"
+                   placeholder="Datepicker"
+                   class="form-control"
+                   bsDatepicker >
+          </div>
+        </div>
+      </form> 
+    </section>
+  
+  </app-overlay>

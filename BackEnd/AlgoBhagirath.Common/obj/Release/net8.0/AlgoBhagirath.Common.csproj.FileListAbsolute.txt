@@ -1,0 +1,12 @@
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\bin\Release\net8.0\AlgoBhagirath.Common.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\bin\Release\net8.0\AlgoBhagirath.Common.dll
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\bin\Release\net8.0\AlgoBhagirath.Common.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\AlgoBhagirath.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\AlgoBhagirath.Common.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\AlgoBhagirath.Common.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\AlgoBhagirath.Common.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\AlgoBhagirath.Common.dll
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\refint\AlgoBhagirath.Common.dll
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\AlgoBhagirath.Common.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\ref\AlgoBhagirath.Common.dll
+C:\Users\divye\source\repos\AlgoBhagirath\AlgoBhagirath.Common\obj\Release\net8.0\AlgoBhagirath.Common.csproj.AssemblyReference.cache

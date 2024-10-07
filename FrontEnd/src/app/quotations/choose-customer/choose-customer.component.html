@@ -1,0 +1,35 @@
+<section class="d-flex flex-column h-100 overflow-hidden px-3">
+    <div class="flex-grow-1 overflow-vertical bg-white p-3">
+      <div
+        class="d-flex flex-column h-100 align-items-center justify-content-center overflow-hidden"
+      >
+        <h1 class="pb-3">Select an action</h1>
+        <div class="row">
+          <div class="col-12 col-md-6" [routerLink]="['/customer/add']">
+            <div class="card bg-light shadow-sm">
+              <div>
+                <div class="card-icon-wrapper mx-auto">
+                  <span class="card-icons fi fi-tr-registration-paper"></span>
+                </div>
+                <h3 class="text-nowrap text-center text-primary py-3">
+                  Create New Profile
+                </h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6" [routerLink]="['/quotation/load-profile']">
+            <div class="card bg-light shadow-sm">
+              <div>
+                <div class="card-icon-wrapper mx-auto">
+                  <span class="card-icons fi fi-tr-user-gear"></span>
+                </div>
+                <h3 class="text-nowrap text-center text-primary py-3">
+                  Load existing profile
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

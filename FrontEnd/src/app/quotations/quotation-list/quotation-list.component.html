@@ -1,0 +1,80 @@
+<div class="flex-grow-1 d-flex flex-column h-100 overflow-hidden">
+    <header class="d-flex pb-3">
+        <h5>Quotations</h5>
+        <aside class="flex-grow-1 d-flex justify-content-end align-items-center">
+            <div class="d-flex flex-wrap page-toolbar__actions me-2">
+                <div class="page-toolbar__search-box">
+                    <input type="text" class="form-control" id="searchBox" placeholder="Search Here" />
+                    <label for="searchBox" class="fa fa-search" id="searchBox"></label>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-primary d-flex align-items-center" type="button" title="Add"
+                    [routerLink]="['../add']"> <span
+                        class="d-flex flex-column align-items-center fi-rr-square-plus me-2"></span> Add
+                </button>
+            </div>
+        </aside>
+    </header>
+    <div class="flex-grow-1 overflow-vertical bg-white">
+        <div class="table-wrapper data-table">
+            <table class="data-table windshield-list" aria-describedby="claim table">
+                <thead class="sticky-table-header border-bottom">
+                    <tr>
+                        <th scope="col" class="serial-no">
+                            <div class="cell-header">
+                                <span>Id</span>
+
+                            </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                            <div class="cell-header">
+                                <span>Customer Name</span>
+                            </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                            <div class="cell-header">
+                                <span>Product Type</span>
+                            </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                            <div class="cell-header">
+                                <span>Order Number</span>
+                            </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                            <div class="cell-header">
+                                <span>Status</span>
+                            </div>
+                        </th>
+                        <th scope="col" class="vendor">
+                            <div class="cell-header">
+                                <span>Action</span>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cell-body serial-no">9255</td>
+                        <td class="cell-body">Eddybrook construction Ltd.</td>
+                        <td class="cell-body">103 Abergale place</td>
+                        <td class="cell-body">10</td>
+                        <td class="cell-body">In-Progress</td>
+                        <td class="cell-body">
+                            <button class="btn btn-transparent p-0 me-2" type="button" (click)="viewQuotation(1)">
+                              <span class="fa fa-eye text-info"></span>
+                            </button>
+                            <button class="btn btn-transparent p-0 me-2" type="button" (click)="downlodQuotation(1)">
+                              <span class="fa fa-download text-danger"></span>
+                            </button>
+                            <button class="btn btn-transparent p-0" type="button" (click)="headerQuotation(1)">
+                              <span class="fa fa-pencil-square-o text-success"></span>
+                            </button>
+                          </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+.register-container {
+  max-width: 920px;
+  display: flex;
+  .right-section {
+    width: 40%;  
+  }
+  .left-section {
+    flex-grow: 1;
+  }
+}
+
+#wrapper{
+  background-image: url("../../../../assets/images/Designer.png");
+}

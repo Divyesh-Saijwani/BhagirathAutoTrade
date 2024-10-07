@@ -1,0 +1,80 @@
+<div class="flex-grow-1 d-flex flex-column h-100 overflow-hidden">
+    <header class="d-flex pb-3">
+      <h5>Configuration Details</h5>
+      <aside class="flex-grow-1 d-flex justify-content-end align-items-center">
+        <div class="d-flex flex-wrap page-toolbar__actions me-2">
+          <div class="page-toolbar__search-box">
+            <input type="text" class="form-control" id="searchBox" placeholder="Search Here" [(ngModel)]="searchText" />
+            <label for="searchBox" class="fa fa-search" id="searchBox"></label>
+          </div>
+        </div>
+      </aside>
+    </header>
+    <div class="flex-grow-1 overflow-vertical bg-white">
+      <div class="table-wrapper data-table">
+        <table class="data-table windshield-list" aria-describedby="claim table">
+          <thead class="sticky-table-header border-bottom">
+            <tr>
+              <th scope="col" class="serial-no">
+                <div class="cell-header">
+                  <span> ID</span>
+                </div>
+              </th>
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Broker Name</span>
+                </div>
+              </th>
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Configuration Name</span>
+                </div>
+              </th>
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>New Value</span>
+                </div>
+              </th>
+  
+              <th scope="col" class="vendor">
+                <div class="cell-header">
+                  <span>Action</span>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of configList | serch : searchText; let i = index">
+              <td class="cell-body serial-no">{{ i + 1 }}</td>
+              <td class="cell-body">{{ item.brokerName }}</td>
+              <td class="cell-body">{{ item.configName }}</td>
+              <td class="cell-body">
+                <input type="text" [(ngModel)]="item.configUpdatedValue" class="form-control">
+              </td>
+              <td class="cell-body">
+                <button
+                  class="btn btn-success"
+                  type="button"
+                  name="Update"
+                  title="Update"
+                  (click)="updateConfiguration(item.brokerConfigurationId,item.configUpdatedValue)"
+                >
+                  <span class="fa fa-wrench"></span>
+                </button>
+              </td>
+            </tr>
+            <tr *ngIf="configList?.length == 0" style="display: none;">
+              <td colspan="10">
+                <div class="d-flex flex-column align-items-center py-3">
+                  <div class="no-record-img ">
+                    <img src="../../../assets/images/no-data.svg" alt="No record found" class="img-fluid">
+                  </div>
+                  <h4 class="text-primary mb-0 pt-3">No Record Found</h4>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

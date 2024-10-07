@@ -1,0 +1,11 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\bin\Debug\net8.0\Trader.KotakSecurities.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\bin\Debug\net8.0\Trader.KotakSecurities.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\bin\Debug\net8.0\Trader.KotakSecurities.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\obj\Debug\net8.0\Trader.KotakSecurities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\obj\Debug\net8.0\Trader.KotakSecurities.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\obj\Debug\net8.0\Trader.KotakSecurities.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\obj\Debug\net8.0\Trader.KotakSecurities.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\obj\Debug\net8.0\Trader.KotakSecurities.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\obj\Debug\net8.0\refint\Trader.KotakSecurities.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\obj\Debug\net8.0\Trader.KotakSecurities.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.KotakSecurities\obj\Debug\net8.0\ref\Trader.KotakSecurities.dll

@@ -1,0 +1,11 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\bin\Debug\net8.0\Trader.SherKhan.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\bin\Debug\net8.0\Trader.SherKhan.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\bin\Debug\net8.0\Trader.SherKhan.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\obj\Debug\net8.0\Trader.SherKhan.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\obj\Debug\net8.0\Trader.SherKhan.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\obj\Debug\net8.0\Trader.SherKhan.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\obj\Debug\net8.0\Trader.SherKhan.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\obj\Debug\net8.0\Trader.SherKhan.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\obj\Debug\net8.0\refint\Trader.SherKhan.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\obj\Debug\net8.0\Trader.SherKhan.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.SherKhan\obj\Debug\net8.0\ref\Trader.SherKhan.dll

@@ -1,0 +1,1073 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bhagirathfincareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SuperCallsData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="flag" Type="int" Nullable="false" />
+          <Property Name="SuperCallString" Type="nvarchar(max)" />
+          <Property Name="ModifiedDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ELMAH_Error">
+          <Key>
+            <PropertyRef Name="ErrorId" />
+          </Key>
+          <Property Name="ErrorId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="Application" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="Host" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Type" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Source" Type="nvarchar" MaxLength="60" Nullable="false" />
+          <Property Name="Message" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="User" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StatusCode" Type="int" Nullable="false" />
+          <Property Name="TimeUtc" Type="datetime" Nullable="false" />
+          <Property Name="Sequence" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AllXml" Type="ntext" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Holidays">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HolidayDate" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="HolidayId" Type="int" Nullable="false" />
+          <Property Name="HolidayType" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HotStock">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CompanyName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MobileNumber" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="SubscriptionType" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="AllowedEquity" Type="bit" Nullable="false" />
+          <Property Name="AllowedCommodity" Type="bit" Nullable="false" />
+          <Property Name="AllowedCurrency" Type="bit" Nullable="false" />
+          <Property Name="SubTotal" Type="float" Nullable="false" />
+          <Property Name="Gstper" Type="float" />
+          <Property Name="Discountper" Type="float" />
+          <Property Name="GrandTotal" Type="float" Nullable="false" />
+          <Property Name="IsPaid" Type="bit" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MarketPrice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Symbol" Type="nvarchar" MaxLength="100" />
+          <Property Name="ExpiryDate" Type="datetime" />
+          <Property Name="StrikePrice" Type="nvarchar" MaxLength="50" />
+          <Property Name="OptionType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Open" Type="nvarchar" MaxLength="20" />
+          <Property Name="High" Type="nvarchar" MaxLength="20" />
+          <Property Name="Low" Type="nvarchar" MaxLength="20" />
+          <Property Name="Close" Type="nvarchar" MaxLength="20" />
+          <Property Name="UploadDate" Type="datetime" />
+          <Property Name="FileType" Type="int" Nullable="false" />
+          <Property Name="ScriptCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="EMA13" Type="nvarchar" MaxLength="10" />
+          <Property Name="EMA34" Type="nvarchar" MaxLength="10" />
+          <Property Name="TotalTradeValue" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="RecursiveResult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Symbol" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileType" Type="int" />
+          <Property Name="Amount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="RecursiveUpload">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Symbol" Type="nvarchar" MaxLength="50" />
+          <Property Name="ExpiryDate" Type="datetime" />
+          <Property Name="StrikePrice" Type="nvarchar" MaxLength="50" />
+          <Property Name="OptionType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Open" Type="nvarchar" MaxLength="50" />
+          <Property Name="High" Type="nvarchar" MaxLength="50" />
+          <Property Name="Low" Type="nvarchar" MaxLength="50" />
+          <Property Name="Cmp" Type="nvarchar" MaxLength="50" />
+          <Property Name="Close" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileType" Type="int" />
+          <Property Name="UploadDateTime" Type="datetime" />
+          <Property Name="FileNo" Type="int" />
+          <Property Name="Average" Type="nvarchar" MaxLength="50" />
+          <Property Name="TotalTradeValue" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="56" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="MobileNumber" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="SessionId" Type="nvarchar(max)" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="LastUpadateDate" Type="datetime" Nullable="false" />
+          <Property Name="IsExpire" Type="bit" Nullable="false" />
+          <Property Name="LastPaymentDate" Type="datetime" Nullable="false" />
+          <Property Name="PaymentType" Type="int" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="SubscriptionType" Type="nvarchar(max)" />
+          <Property Name="IsAssociate" Type="bit" Nullable="false" />
+          <Property Name="ParentAssociateCode" Type="nvarchar(max)" />
+          <Property Name="AssociateCode" Type="nvarchar(max)" />
+          <Property Name="BirthDate" Type="datetime" />
+          <Property Name="AllowedEquity" Type="bit" Nullable="false" />
+          <Property Name="AllowedCommodity" Type="bit" Nullable="false" />
+          <Property Name="AllowedCurrency" Type="bit" Nullable="false" />
+          <Property Name="AllowedHotStocks" Type="bit" />
+          <Property Name="AllowedSuperCallsEquity" Type="bit" />
+          <Property Name="AllowedSuperCallsCommodity" Type="bit" />
+          <Property Name="AllowedSuperCallsCurrency" Type="bit" />
+          <Property Name="IPAddress" Type="nvarchar(max)" />
+          <Property Name="IsAdmin" Type="bit" />
+        </EntityType>
+        <EntityType Name="webpages_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsConfirmed" Type="bit" />
+          <Property Name="LastPasswordFailureDate" Type="datetime" />
+          <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="PasswordChangedDate" Type="datetime" />
+          <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+          <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="webpages_OAuthMembership">
+          <Key>
+            <PropertyRef Name="Provider" />
+            <PropertyRef Name="ProviderUserId" />
+          </Key>
+          <Property Name="Provider" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ProviderUserId" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="webpages_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="webpages_UsersInRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_RoleId">
+          <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="1" />
+          <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="webpages_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="webpages_UsersInRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_UserId">
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="1" />
+          <End Role="webpages_UsersInRoles" Type="Self.webpages_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserProfile">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="webpages_UsersInRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="AddOrUpdateSuperCallsData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="bhagirathfincareuser">
+          <Parameter Name="flag" Type="int" Mode="In" />
+          <Parameter Name="SuperCallString" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="AutoCompleteSymbol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="filetype" Type="int" Mode="In" />
+          <Parameter Name="optiontype" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="DeleteDataBeforeUpload" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FileNo" Type="int" Mode="In" />
+          <Parameter Name="FileType" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DeleteDataForResult" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FileNo" Type="int" Mode="In" />
+          <Parameter Name="FileType" Type="int" Mode="In" />
+        </Function>
+        <Function Name="DeleteRecursiveFile" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FileType" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ELMAH_GetErrorsXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Application" Type="nvarchar" Mode="In" />
+          <Parameter Name="PageIndex" Type="int" Mode="In" />
+          <Parameter Name="PageSize" Type="int" Mode="In" />
+          <Parameter Name="TotalCount" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="ELMAH_GetErrorXml" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Application" Type="nvarchar" Mode="In" />
+          <Parameter Name="ErrorId" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="ELMAH_LogError" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ErrorId" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="Application" Type="nvarchar" Mode="In" />
+          <Parameter Name="Host" Type="nvarchar" Mode="In" />
+          <Parameter Name="Type" Type="nvarchar" Mode="In" />
+          <Parameter Name="Source" Type="nvarchar" Mode="In" />
+          <Parameter Name="Message" Type="nvarchar" Mode="In" />
+          <Parameter Name="User" Type="nvarchar" Mode="In" />
+          <Parameter Name="AllXml" Type="ntext" Mode="In" />
+          <Parameter Name="StatusCode" Type="int" Mode="In" />
+          <Parameter Name="TimeUtc" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetChartData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="associateCode" Type="nvarchar" Mode="In" />
+          <Parameter Name="startDate" Type="datetime" Mode="In" />
+          <Parameter Name="endDate" Type="datetime" Mode="In" />
+        </Function>
+        <Function Name="GetCTLDCTHDData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ExpiryDate" Type="date" Mode="In" />
+          <Parameter Name="WorkingDate" Type="date" Mode="In" />
+          <Parameter Name="OptionType" Type="nvarchar" Mode="In" />
+          <Parameter Name="FileType" Type="int" Mode="In" />
+          <Parameter Name="Symbol" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="StrikePrice" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="GetHotStockRecursiveUploadData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="flag" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="GetPDLPDHData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ExpiryDate" Type="date" Mode="In" />
+          <Parameter Name="WorkingDate" Type="date" Mode="In" />
+          <Parameter Name="OptionType" Type="nvarchar" Mode="In" />
+          <Parameter Name="FileType" Type="int" Mode="In" />
+          <Parameter Name="Symbol" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="StrikePrice" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="GetTDLTDHData" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ExpiryDate" Type="date" Mode="In" />
+          <Parameter Name="WorkingDate" Type="date" Mode="In" />
+          <Parameter Name="OptionType" Type="nvarchar" Mode="In" />
+          <Parameter Name="FileType" Type="int" Mode="In" />
+          <Parameter Name="Symbol" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="StrikePrice" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="NoOfDayOfDataToBeTaken" Type="int" Mode="In" />
+        </Function>
+        <Function Name="mv9_varchar_table" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="companyname" Type="varchar" Mode="In" />
+          <Parameter Name="passeddate" Type="varchar" Mode="In" />
+          <Parameter Name="IDH" Type="float" Mode="In" />
+          <Parameter Name="idl" Type="float" Mode="In" />
+        </Function>
+        <EntityContainer Name="bhagirathfincareModelStoreContainer">
+          <EntitySet Name="SuperCallsData" EntityType="Self.SuperCallsData" Schema="bhagirathfincareuser" store:Type="Tables" />
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ELMAH_Error" EntityType="Self.ELMAH_Error" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Holidays" EntityType="Self.Holidays" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HotStock" EntityType="Self.HotStock" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MarketPrice" EntityType="Self.MarketPrice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RecursiveResult" EntityType="Self.RecursiveResult" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RecursiveUpload" EntityType="Self.RecursiveUpload" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserProfile" EntityType="Self.UserProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="webpages_UsersInRoles" EntityType="Self.webpages_UsersInRoles" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="fk_RoleId" Association="Self.fk_RoleId">
+            <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+            <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="fk_UserId" Association="Self.fk_UserId">
+            <End Role="UserProfile" EntitySet="UserProfile" />
+            <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bhagirathfincareModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SuperCallsData">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SuperCallString" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="flag" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ELMAH_Error">
+          <Key>
+            <PropertyRef Name="ErrorId" />
+          </Key>
+          <Property Name="ErrorId" Type="Guid" Nullable="false" />
+          <Property Name="Application" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Host" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Type" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Source" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="User" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StatusCode" Type="Int32" Nullable="false" />
+          <Property Name="TimeUtc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Sequence" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AllXml" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Holidays">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HolidayDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="HolidayId" Type="Int32" Nullable="false" />
+          <Property Name="HolidayType" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="HotStock">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CompanyName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MobileNumber" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SubscriptionType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="AllowedEquity" Type="Boolean" Nullable="false" />
+          <Property Name="AllowedCommodity" Type="Boolean" Nullable="false" />
+          <Property Name="AllowedCurrency" Type="Boolean" Nullable="false" />
+          <Property Name="SubTotal" Type="Double" Nullable="false" />
+          <Property Name="Gstper" Type="Double" />
+          <Property Name="Discountper" Type="Double" />
+          <Property Name="GrandTotal" Type="Double" Nullable="false" />
+          <Property Name="IsPaid" Type="Boolean" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="MarketPrice">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Symbol" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+          <Property Name="StrikePrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OptionType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Open" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="High" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Low" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Close" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="UploadDate" Type="DateTime" Precision="3" />
+          <Property Name="FileType" Type="Int32" Nullable="false" />
+          <Property Name="ScriptCode" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="EMA13" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="EMA34" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TotalTradeValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RecursiveResult">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Symbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="Int32" />
+          <Property Name="Amount" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RecursiveUpload">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Symbol" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ExpiryDate" Type="DateTime" Precision="3" />
+          <Property Name="StrikePrice" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="OptionType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Open" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="High" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Low" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cmp" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Close" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FileType" Type="Int32" />
+          <Property Name="UploadDateTime" Type="DateTime" Precision="3" />
+          <Property Name="FileNo" Type="Int32" />
+          <Property Name="Average" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TotalTradeValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="56" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="webpages_Roles" Relationship="Self.webpages_UsersInRoles" FromRole="UserProfile" ToRole="webpages_Roles" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MobileNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SessionId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="LastUpadateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsExpire" Type="Boolean" Nullable="false" />
+          <Property Name="LastPaymentDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PaymentType" Type="Int32" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="SubscriptionType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsAssociate" Type="Boolean" Nullable="false" />
+          <Property Name="ParentAssociateCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AssociateCode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="BirthDate" Type="DateTime" Precision="3" />
+          <Property Name="AllowedEquity" Type="Boolean" Nullable="false" />
+          <Property Name="AllowedCommodity" Type="Boolean" Nullable="false" />
+          <Property Name="AllowedCurrency" Type="Boolean" Nullable="false" />
+          <Property Name="IPAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsAdmin" Type="Boolean" />
+          <Property Name="AllowedHotStocks" Type="Boolean" />
+          <Property Name="AllowedSuperCallsEquity" Type="Boolean" />
+          <Property Name="AllowedSuperCallsCommodity" Type="Boolean" />
+          <Property Name="AllowedSuperCallsCurrency" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="webpages_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ConfirmationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="IsConfirmed" Type="Boolean" />
+          <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+          <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+          <Property Name="PasswordSalt" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="webpages_OAuthMembership">
+          <Key>
+            <PropertyRef Name="Provider" />
+            <PropertyRef Name="ProviderUserId" />
+          </Key>
+          <Property Name="Provider" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProviderUserId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="webpages_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="UserProfile" Relationship="Self.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="UserProfile" />
+        </EntityType>
+        <Association Name="webpages_UsersInRoles">
+          <End Role="webpages_Roles" Type="Self.webpages_Roles" Multiplicity="*" />
+          <End Role="UserProfile" Type="Self.UserProfile" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="BhagirathFinCareEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SuperCallsData" EntityType="Self.SuperCallsData" />
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="ELMAH_Error" EntityType="Self.ELMAH_Error" />
+          <EntitySet Name="Holidays" EntityType="Self.Holidays" />
+          <EntitySet Name="HotStock" EntityType="Self.HotStock" />
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" />
+          <EntitySet Name="MarketPrice" EntityType="Self.MarketPrice" />
+          <EntitySet Name="RecursiveResult" EntityType="Self.RecursiveResult" />
+          <EntitySet Name="RecursiveUpload" EntityType="Self.RecursiveUpload" />
+          <EntitySet Name="UserProfile" EntityType="Self.UserProfile" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="webpages_Membership" EntityType="Self.webpages_Membership" />
+          <EntitySet Name="webpages_OAuthMembership" EntityType="Self.webpages_OAuthMembership" />
+          <EntitySet Name="webpages_Roles" EntityType="Self.webpages_Roles" />
+          <AssociationSet Name="webpages_UsersInRoles" Association="Self.webpages_UsersInRoles">
+            <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+            <End Role="UserProfile" EntitySet="UserProfile" />
+          </AssociationSet>
+          <FunctionImport Name="AddOrUpdateSuperCallsData">
+            <Parameter Name="flag" Mode="In" Type="Int32" />
+            <Parameter Name="SuperCallString" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="AutoCompleteSymbol" ReturnType="Collection(String)">
+            <Parameter Name="filetype" Mode="In" Type="Int32" />
+            <Parameter Name="optiontype" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteDataBeforeUpload">
+            <Parameter Name="FileNo" Mode="In" Type="Int32" />
+            <Parameter Name="FileType" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteDataForResult">
+            <Parameter Name="FileNo" Mode="In" Type="Int32" />
+            <Parameter Name="FileType" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="DeleteRecursiveFile">
+          <Parameter Name="FileType" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ELMAH_GetErrorsXml" ReturnType="Collection(String)">
+            <Parameter Name="Application" Mode="In" Type="String" />
+            <Parameter Name="PageIndex" Mode="In" Type="Int32" />
+            <Parameter Name="PageSize" Mode="In" Type="Int32" />
+            <Parameter Name="TotalCount" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ELMAH_GetErrorXml" ReturnType="Collection(String)">
+            <Parameter Name="Application" Mode="In" Type="String" />
+            <Parameter Name="ErrorId" Mode="In" Type="Guid" />
+          </FunctionImport>
+          <FunctionImport Name="ELMAH_LogError">
+            <Parameter Name="ErrorId" Mode="In" Type="Guid" />
+            <Parameter Name="Application" Mode="In" Type="String" />
+            <Parameter Name="Host" Mode="In" Type="String" />
+            <Parameter Name="Type" Mode="In" Type="String" />
+            <Parameter Name="Source" Mode="In" Type="String" />
+            <Parameter Name="Message" Mode="In" Type="String" />
+            <Parameter Name="User" Mode="In" Type="String" />
+            <Parameter Name="AllXml" Mode="In" Type="String" />
+            <Parameter Name="StatusCode" Mode="In" Type="Int32" />
+            <Parameter Name="TimeUtc" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetChartData">
+            <Parameter Name="associateCode" Mode="In" Type="String" />
+            <Parameter Name="startDate" Mode="In" Type="DateTime" />
+            <Parameter Name="endDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetCTLDCTHDData" ReturnType="Collection(bhagirathfincareModel.GetCTLDCTHDData_Result)">
+            <Parameter Name="ExpiryDate" Mode="In" Type="DateTime" />
+            <Parameter Name="WorkingDate" Mode="In" Type="DateTime" />
+            <Parameter Name="OptionType" Mode="In" Type="String" />
+            <Parameter Name="FileType" Mode="In" Type="Int32" />
+            <Parameter Name="Symbol" Mode="In" Type="String" />
+            <Parameter Name="StrikePrice" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetHotStockRecursiveUploadData" ReturnType="Collection(bhagirathfincareModel.GetHotStockRecursiveUploadData_Result)">
+          <Parameter Name="flag" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="GetPDLPDHData" ReturnType="Collection(bhagirathfincareModel.GetPDLPDHData_Result)">
+            <Parameter Name="ExpiryDate" Mode="In" Type="DateTime" />
+            <Parameter Name="WorkingDate" Mode="In" Type="DateTime" />
+            <Parameter Name="OptionType" Mode="In" Type="String" />
+            <Parameter Name="FileType" Mode="In" Type="Int32" />
+            <Parameter Name="Symbol" Mode="In" Type="String" />
+            <Parameter Name="StrikePrice" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetTDLTDHData" ReturnType="Collection(bhagirathfincareModel.GetTDLTDHData_Result)">
+            <Parameter Name="ExpiryDate" Mode="In" Type="DateTime" />
+            <Parameter Name="WorkingDate" Mode="In" Type="DateTime" />
+            <Parameter Name="OptionType" Mode="In" Type="String" />
+            <Parameter Name="FileType" Mode="In" Type="Int32" />
+            <Parameter Name="Symbol" Mode="In" Type="String" />
+            <Parameter Name="StrikePrice" Mode="In" Type="String" />
+            <Parameter Name="NoOfDayOfDataToBeTaken" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="mv9_varchar_table" ReturnType="Collection(bhagirathfincareModel.mv9_varchar_table_Result)">
+            <Parameter Name="companyname" Mode="In" Type="String" />
+            <Parameter Name="passeddate" Mode="In" Type="String" />
+            <Parameter Name="IDH" Mode="In" Type="Double" />
+            <Parameter Name="idl" Mode="In" Type="Double" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetCTLDCTHDData_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Symbol" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="StrikePrice" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OptionType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Open" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="High" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Low" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Close" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="UploadDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FileType" Nullable="false" />
+          <Property Type="String" Name="ScriptCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="EMA13" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="EMA34" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TotalTradeValue" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="rn" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetHotStockRecursiveUploadData_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Symbol" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="StrikePrice" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OptionType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Open" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="High" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Low" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Cmp" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Close" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="FileType" Nullable="true" />
+          <Property Type="DateTime" Name="UploadDateTime" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FileNo" Nullable="true" />
+          <Property Type="String" Name="Average" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="TotalTradeValue" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GetPDLPDHData_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Symbol" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="StrikePrice" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OptionType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Open" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="High" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Low" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Close" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="UploadDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FileType" Nullable="false" />
+          <Property Type="String" Name="ScriptCode" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="GetTDLTDHData_Result">
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="String" Name="Symbol" Nullable="true" MaxLength="100" />
+          <Property Type="DateTime" Name="ExpiryDate" Nullable="true" Precision="23" />
+          <Property Type="String" Name="StrikePrice" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="OptionType" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Open" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="High" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Low" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Close" Nullable="true" MaxLength="20" />
+          <Property Type="DateTime" Name="UploadDate" Nullable="true" Precision="23" />
+          <Property Type="Int32" Name="FileType" Nullable="false" />
+          <Property Type="String" Name="ScriptCode" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="EMA13" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="EMA34" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="TotalTradeValue" Nullable="true" MaxLength="50" />
+          <Property Type="Int64" Name="rn" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="mv9_varchar_table_Result">
+          <Property Type="Double" Name="ctld" Nullable="true" />
+          <Property Type="Double" Name="cthd" Nullable="true" />
+          <Property Type="Double" Name="pdl" Nullable="true" />
+          <Property Type="Double" Name="pdh" Nullable="true" />
+          <Property Type="Double" Name="tdl" Nullable="true" />
+          <Property Type="Double" Name="tdh" Nullable="true" />
+          <Property Type="DateTime" Name="startingdate" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bhagirathfincareModelStoreContainer" CdmEntityContainer="BhagirathFinCareEntities">
+          <EntitySetMapping Name="SuperCallsData">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.SuperCallsData">
+              <MappingFragment StoreEntitySet="SuperCallsData">
+                <ScalarProperty Name="ModifiedDateTime" ColumnName="ModifiedDateTime" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="SuperCallString" ColumnName="SuperCallString" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ELMAH_Error">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.ELMAH_Error">
+              <MappingFragment StoreEntitySet="ELMAH_Error">
+                <ScalarProperty Name="ErrorId" ColumnName="ErrorId" />
+                <ScalarProperty Name="Application" ColumnName="Application" />
+                <ScalarProperty Name="Host" ColumnName="Host" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="User" ColumnName="User" />
+                <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+                <ScalarProperty Name="TimeUtc" ColumnName="TimeUtc" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="AllXml" ColumnName="AllXml" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Holidays">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.Holidays">
+              <MappingFragment StoreEntitySet="Holidays">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="HolidayDate" ColumnName="HolidayDate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="HolidayId" ColumnName="HolidayId" />
+                <ScalarProperty Name="HolidayType" ColumnName="HolidayType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HotStock">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.HotStock">
+              <MappingFragment StoreEntitySet="HotStock">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invoice">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="SubscriptionType" ColumnName="SubscriptionType" />
+                <ScalarProperty Name="AllowedEquity" ColumnName="AllowedEquity" />
+                <ScalarProperty Name="AllowedCommodity" ColumnName="AllowedCommodity" />
+                <ScalarProperty Name="AllowedCurrency" ColumnName="AllowedCurrency" />
+                <ScalarProperty Name="SubTotal" ColumnName="SubTotal" />
+                <ScalarProperty Name="Gstper" ColumnName="Gstper" />
+                <ScalarProperty Name="Discountper" ColumnName="Discountper" />
+                <ScalarProperty Name="GrandTotal" ColumnName="GrandTotal" />
+                <ScalarProperty Name="IsPaid" ColumnName="IsPaid" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MarketPrice">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.MarketPrice">
+              <MappingFragment StoreEntitySet="MarketPrice">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="StrikePrice" ColumnName="StrikePrice" />
+                <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="ScriptCode" ColumnName="ScriptCode" />
+                <ScalarProperty Name="EMA13" ColumnName="EMA13" />
+                <ScalarProperty Name="EMA34" ColumnName="EMA34" />
+                <ScalarProperty Name="TotalTradeValue" ColumnName="TotalTradeValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RecursiveResult">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.RecursiveResult">
+              <MappingFragment StoreEntitySet="RecursiveResult">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RecursiveUpload">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.RecursiveUpload">
+              <MappingFragment StoreEntitySet="RecursiveUpload">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="StrikePrice" ColumnName="StrikePrice" />
+                <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Cmp" ColumnName="Cmp" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="UploadDateTime" ColumnName="UploadDateTime" />
+                <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+                <ScalarProperty Name="Average" ColumnName="Average" />
+                <ScalarProperty Name="TotalTradeValue" ColumnName="TotalTradeValue" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProfile">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.UserProfile">
+              <MappingFragment StoreEntitySet="UserProfile">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="AllowedSuperCallsCurrency" ColumnName="AllowedSuperCallsCurrency" />
+                <ScalarProperty Name="AllowedSuperCallsCommodity" ColumnName="AllowedSuperCallsCommodity" />
+                <ScalarProperty Name="AllowedSuperCallsEquity" ColumnName="AllowedSuperCallsEquity" />
+                <ScalarProperty Name="AllowedHotStocks" ColumnName="AllowedHotStocks" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="MobileNumber" ColumnName="MobileNumber" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="LastUpadateDate" ColumnName="LastUpadateDate" />
+                <ScalarProperty Name="IsExpire" ColumnName="IsExpire" />
+                <ScalarProperty Name="LastPaymentDate" ColumnName="LastPaymentDate" />
+                <ScalarProperty Name="PaymentType" ColumnName="PaymentType" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="SubscriptionType" ColumnName="SubscriptionType" />
+                <ScalarProperty Name="IsAssociate" ColumnName="IsAssociate" />
+                <ScalarProperty Name="ParentAssociateCode" ColumnName="ParentAssociateCode" />
+                <ScalarProperty Name="AssociateCode" ColumnName="AssociateCode" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="AllowedEquity" ColumnName="AllowedEquity" />
+                <ScalarProperty Name="AllowedCommodity" ColumnName="AllowedCommodity" />
+                <ScalarProperty Name="AllowedCurrency" ColumnName="AllowedCurrency" />
+                <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_Membership">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.webpages_Membership">
+              <MappingFragment StoreEntitySet="webpages_Membership">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+                <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+                <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+                <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+                <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_OAuthMembership">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.webpages_OAuthMembership">
+              <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+                <ScalarProperty Name="Provider" ColumnName="Provider" />
+                <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_Roles">
+            <EntityTypeMapping TypeName="bhagirathfincareModel.webpages_Roles">
+              <MappingFragment StoreEntitySet="webpages_Roles">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="bhagirathfincareModel.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+            <EndProperty Name="webpages_Roles">
+              <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="UserProfile">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <FunctionImportMapping FunctionImportName="AddOrUpdateSuperCallsData" FunctionName="bhagirathfincareModel.Store.AddOrUpdateSuperCallsData" />
+          <FunctionImportMapping FunctionImportName="AutoCompleteSymbol" FunctionName="bhagirathfincareModel.Store.AutoCompleteSymbol" />
+          <FunctionImportMapping FunctionImportName="DeleteDataBeforeUpload" FunctionName="bhagirathfincareModel.Store.DeleteDataBeforeUpload" />
+          <FunctionImportMapping FunctionImportName="DeleteDataForResult" FunctionName="bhagirathfincareModel.Store.DeleteDataForResult" />
+          <FunctionImportMapping FunctionImportName="DeleteRecursiveFile" FunctionName="bhagirathfincareModel.Store.DeleteRecursiveFile" />
+          <FunctionImportMapping FunctionImportName="ELMAH_GetErrorsXml" FunctionName="bhagirathfincareModel.Store.ELMAH_GetErrorsXml" />
+          <FunctionImportMapping FunctionImportName="ELMAH_GetErrorXml" FunctionName="bhagirathfincareModel.Store.ELMAH_GetErrorXml" />
+          <FunctionImportMapping FunctionImportName="ELMAH_LogError" FunctionName="bhagirathfincareModel.Store.ELMAH_LogError" />
+          <FunctionImportMapping FunctionImportName="GetChartData" FunctionName="bhagirathfincareModel.Store.GetChartData" />
+          <FunctionImportMapping FunctionImportName="GetCTLDCTHDData" FunctionName="bhagirathfincareModel.Store.GetCTLDCTHDData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bhagirathfincareModel.GetCTLDCTHDData_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="StrikePrice" ColumnName="StrikePrice" />
+                <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="ScriptCode" ColumnName="ScriptCode" />
+                <ScalarProperty Name="EMA13" ColumnName="EMA13" />
+                <ScalarProperty Name="EMA34" ColumnName="EMA34" />
+                <ScalarProperty Name="TotalTradeValue" ColumnName="TotalTradeValue" />
+                <ScalarProperty Name="rn" ColumnName="rn" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetHotStockRecursiveUploadData" FunctionName="bhagirathfincareModel.Store.GetHotStockRecursiveUploadData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bhagirathfincareModel.GetHotStockRecursiveUploadData_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="StrikePrice" ColumnName="StrikePrice" />
+                <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Cmp" ColumnName="Cmp" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="UploadDateTime" ColumnName="UploadDateTime" />
+                <ScalarProperty Name="FileNo" ColumnName="FileNo" />
+                <ScalarProperty Name="Average" ColumnName="Average" />
+                <ScalarProperty Name="TotalTradeValue" ColumnName="TotalTradeValue" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetPDLPDHData" FunctionName="bhagirathfincareModel.Store.GetPDLPDHData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bhagirathfincareModel.GetPDLPDHData_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="StrikePrice" ColumnName="StrikePrice" />
+                <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="ScriptCode" ColumnName="ScriptCode" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetTDLTDHData" FunctionName="bhagirathfincareModel.Store.GetTDLTDHData">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bhagirathfincareModel.GetTDLTDHData_Result">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Symbol" ColumnName="Symbol" />
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="StrikePrice" ColumnName="StrikePrice" />
+                <ScalarProperty Name="OptionType" ColumnName="OptionType" />
+                <ScalarProperty Name="Open" ColumnName="Open" />
+                <ScalarProperty Name="High" ColumnName="High" />
+                <ScalarProperty Name="Low" ColumnName="Low" />
+                <ScalarProperty Name="Close" ColumnName="Close" />
+                <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="ScriptCode" ColumnName="ScriptCode" />
+                <ScalarProperty Name="EMA13" ColumnName="EMA13" />
+                <ScalarProperty Name="EMA34" ColumnName="EMA34" />
+                <ScalarProperty Name="TotalTradeValue" ColumnName="TotalTradeValue" />
+                <ScalarProperty Name="rn" ColumnName="rn" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="mv9_varchar_table" FunctionName="bhagirathfincareModel.Store.mv9_varchar_table">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="bhagirathfincareModel.mv9_varchar_table_Result">
+                <ScalarProperty Name="ctld" ColumnName="ctld" />
+                <ScalarProperty Name="cthd" ColumnName="cthd" />
+                <ScalarProperty Name="pdl" ColumnName="pdl" />
+                <ScalarProperty Name="pdh" ColumnName="pdh" />
+                <ScalarProperty Name="tdl" ColumnName="tdl" />
+                <ScalarProperty Name="tdh" ColumnName="tdh" />
+                <ScalarProperty Name="startingdate" ColumnName="startingdate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

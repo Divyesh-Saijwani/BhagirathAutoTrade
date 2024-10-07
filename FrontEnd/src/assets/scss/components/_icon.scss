@@ -1,0 +1,17 @@
+.card-icons {
+  font-size: 30px;
+  color: $primary;
+  display: flex;
+  align-items: center;
+}
+.card-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lighten($primary, 40);
+  padding: 7px;
+  border: 3px solid $primary;
+}

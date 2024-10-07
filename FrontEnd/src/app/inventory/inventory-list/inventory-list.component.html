@@ -1,0 +1,107 @@
+<header class="d-flex py-3">
+  <h5>Inventory</h5>
+  <aside class="flex-grow-1 d-flex justify-content-end align-items-center">
+    <div class="d-flex flex-wrap page-toolbar__actions me-2">
+      <div class="page-toolbar__search-box">
+        <input type="text" class="form-control" id="searchBox" placeholder="Search Here"  [(ngModel)]="searchText"/>
+        <label for="searchBox" class="fa fa-search" id="searchBox"></label>
+      </div>
+      <!-- <div> -->
+      <button class="btn btn-outline-primary align-items-center" type="button" title="filter" [disabled]="true">
+        <span class="fi fi-ts-filters me-2"></span> Filter
+      </button>
+
+      <button class="btn btn-outline-success mx-2" type="button" title="Import" (click)="openFile()">
+        <input type="file" id="in1" style="display:none" (change)="onFileChange($event)">
+        <span class="fi fi-rs-file-import icon-lg"></span>
+      </button>
+
+      <button class="btn btn-outline-info" type="button" title="Download" (click)="exportToCsv()">
+        <span class="fi fi-rr-file-download icon-lg"></span>
+      </button>
+
+      <!-- <button class="btn  btn-primary d-flex align-items-center ms-2" type="button" title="Add">
+        <span class="fa fa-plus icon-lg me-2"></span>
+        <span>Add</span>
+      </button> -->
+
+      <!-- <button class="btn btn-primary d-flex align-items-center" type="button" title="Add" [routerLink]="['./add']"> <span class="d-flex flex-column align-items-center fi-rr-square-plus me-2"></span> Add
+                </button> -->
+      <!-- </div> -->
+    </div>
+  </aside>
+</header>
+<div class="flex-grow-1 overflow-vertical bg-white">
+  <div class="table-wrapper data-table">
+    <table class="data-table windshield-list" aria-describedby="claim table">
+      <thead class="sticky-table-header border-bottom">
+        <tr>
+          <th scope="col" class="serial-no">
+            <div class="cell-header">
+              <span> ID</span>
+            </div>
+          </th>
+          <th scope="col" class="vendor">
+            <div class="cell-header">
+              <span>Code</span>
+            </div>
+          </th>
+          <th scope="col" class="vendor">
+            <div class="cell-header">
+              <span>Description</span>
+            </div>
+          </th>
+          <th scope="col" class="vendor">
+            <div class="cell-header">
+              <span>Supplier</span>
+            </div>
+          </th>
+          <!-- <th scope="col" class="vendor">
+            <div class="cell-header">
+              <span>Warehouse</span>
+            </div>
+          </th> -->
+          <th scope="col" class="vendor">
+            <div class="cell-header">
+              <span>UoM</span>
+            </div>
+          </th>
+          <th scope="col" class="vendor">
+            <div class="cell-header">
+              <span>Avg.Cost</span>
+            </div>
+          </th>
+          <th scope="col" class="vendor">
+            <div class="cell-header">
+              <span>Status</span>
+            </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of inventoryList | serch : searchText">
+          
+          <td class="cell-body">{{item.id}}</td>
+          <td class="cell-body">{{item.code}}</td>
+          <td class="cell-body">{{item.description}}</td>
+          <td class="cell-body">{{item.supplier}}</td>
+          <td class="cell-body">{{item.uoM}}</td>
+          <td class="cell-body serial-no">{{item.avgCost}}</td>
+          <td class="cell-body">{{item.isActive}}</td>
+          
+        </tr>
+        <!-- No Record found -->
+        <tr  *ngIf="inventoryList?.length == 0">
+          <td colspan="10">
+            <div class="d-flex flex-column align-items-center py-3">
+              <div class="no-record-img ">
+                <img src="../../../assets/images/no-data.svg" alt="No record found" class="img-fluid">
+              </div>
+              <h4 class="text-primary mb-0 pt-3">No Record Found</h4>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

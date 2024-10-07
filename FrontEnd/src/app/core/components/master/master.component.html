@@ -1,0 +1,16 @@
+<main id="dashboard-wrapper" class="h-100 overflow-hidden">
+  <!-- Main section -->
+  <div class="d-flex h-100 overflow-hidden">
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+    <!-- Main section -->
+    <section class="d-flex flex-column h-100 flex-grow-1 overflow-hidden">
+      <!-- Header -->
+      <app-header></app-header>
+      <!-- Dashboard section -->
+      <router-outlet></router-outlet>
+    </section>
+    <!--  Page loader -->
+    <app-loader [loaderVisibility]="loaderStatus"></app-loader>
+  </div>
+</main>

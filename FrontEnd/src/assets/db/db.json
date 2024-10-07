@@ -1,0 +1,64 @@
+{
+    "menus":[
+        {
+            "id":6,
+            "menuTitle":"dashboard",
+            "menuLink":"/dashboard",
+            "roles":[],
+            "active":true,
+            "subMenu":[],
+            "iconClass":"fi fi-rs-table-rows",
+            "headerTitle":"Dashboard"
+        },
+        {
+            "id":1,
+            "menuTitle":"Users",
+            "menuLink":"/users",
+            "roles":[],
+            "active":true,
+            "subMenu":[],
+            "iconClass":"fi fi-tr-circle-user",
+            "headerTitle":"User Details"
+        },
+        {
+            "id":2,
+            "menuTitle":"Quotation",
+            "menuLink":"/quotation",
+            "roles":[],
+            "active":true,
+            "subMenu":[],
+            "iconClass":"fi fi-rr-block-quote",
+            "headerTitle":"Quotation Details"
+        },
+        {
+            "id":3,
+            "menuTitle":"Customer",
+            "menuLink":"/customer",
+            "roles":[],
+            "active":true,
+            "subMenu":[],
+            "iconClass":"fi fi-tr-hr-person",
+            "headerTitle":"Customer Details"
+        },
+        {
+            "id":4,
+            "menuTitle":"Inventory",
+            "menuLink":"/inventory",
+            "roles":[],
+            "active":true,
+            "subMenu":[],
+            "iconClass":"fi fi-tr-inventory-alt",
+            "headerTitle":"Inventory Details"
+        },
+        {
+            "id":5,
+            "menuTitle":"Products",
+            "menuLink":"/products",
+            "roles":[],
+            "active":true,
+            "subMenu":[],
+            "iconClass":"fi fi-tr-box-open",
+            "headerTitle":"Product Details"
+        }
+    ]
+}

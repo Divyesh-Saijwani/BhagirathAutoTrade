@@ -1,0 +1,11 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\bin\Debug\net8.0\Trader.Zerodha.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\bin\Debug\net8.0\Trader.Zerodha.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\bin\Debug\net8.0\Trader.Zerodha.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\obj\Debug\net8.0\Trader.Zerodha.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\obj\Debug\net8.0\Trader.Zerodha.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\obj\Debug\net8.0\Trader.Zerodha.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\obj\Debug\net8.0\Trader.Zerodha.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\obj\Debug\net8.0\Trader.Zerodha.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\obj\Debug\net8.0\refint\Trader.Zerodha.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\obj\Debug\net8.0\Trader.Zerodha.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.Zerodha\obj\Debug\net8.0\ref\Trader.Zerodha.dll

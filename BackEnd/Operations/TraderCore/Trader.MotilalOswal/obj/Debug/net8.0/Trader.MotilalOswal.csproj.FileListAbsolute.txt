@@ -1,0 +1,11 @@
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\bin\Debug\net8.0\Trader.MotilalOswal.deps.json
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\bin\Debug\net8.0\Trader.MotilalOswal.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\bin\Debug\net8.0\Trader.MotilalOswal.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\obj\Debug\net8.0\Trader.MotilalOswal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\obj\Debug\net8.0\Trader.MotilalOswal.AssemblyInfoInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\obj\Debug\net8.0\Trader.MotilalOswal.AssemblyInfo.cs
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\obj\Debug\net8.0\Trader.MotilalOswal.csproj.CoreCompileInputs.cache
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\obj\Debug\net8.0\Trader.MotilalOswal.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\obj\Debug\net8.0\refint\Trader.MotilalOswal.dll
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\obj\Debug\net8.0\Trader.MotilalOswal.pdb
+C:\Users\divye\source\repos\AlgoBhagirath\Operations\TraderCore\Trader.MotilalOswal\obj\Debug\net8.0\ref\Trader.MotilalOswal.dll

@@ -1,0 +1,32 @@
+.card {
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.category-card {
+  height: 70px;
+  width: 150px;
+  position: relative;
+
+  &:hover {
+    background-color: rgba(8, 111, 186, 0.1);
+    &.hover-content {
+      transition: 0.5s ease-in-out;
+      transform: translateY(0);
+    }
+  }
+  & .hover-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 150px;
+    width: 150px;
+    transform: translateY(-200px);
+    transition: 0.5s ease-in-out;
+  }
+}

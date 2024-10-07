@@ -1,0 +1,72 @@
+<main id="wrapper">
+    <div class="d-flex register-container">
+        <section class="left-section p-3">
+            <h3 class="border-bottom pb-2">Register</h3>
+            <form>
+                <div class="row">
+                    <!-- First Name -->
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="firstName" class="form-label fw-semibold">First Name <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" id="firstName" placeholder="First Name" class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Last Name -->
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="lastName" class="form-label fw-semibold">Last Name <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" id="lastName" placeholder="Enter Last Name" class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Email -->
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="userEmail" class="form-label fw-semibold">Email <span
+                                    class="text-danger">*</span></label>
+                            <input type="email" id="userEmail" placeholder="Enter Email" class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Phone number -->
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="phoneNumber" class="form-label fw-semibold">Phone Number<span
+                                    class="text-danger">*</span></label>
+                            <input type="text" id="phoneNumber" placeholder="Enter Phone Number" class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Password -->
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="userPassword" class="form-label fw-semibold">Password <span
+                                    class="text-danger">*</span></label>
+                            <input type="password" id="userPassword" placeholder="Enter Password"
+                                class="form-control" />
+                        </div>
+                    </div>
+                    <!-- Re enter password -->
+                    <div class="col-12 col-md-6">
+                        <div class="form-group py-3">
+                            <label for="userPassword" class="form-label fw-semibold">Retype your password <span
+                                    class="text-danger">*</span></label>
+                            <input type="password" id="userPassword" placeholder="Enter Password"
+                                class="form-control" />
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pt-3">
+                    <button class="btn btn-primary text-white w-100" type="button" title="Register">Register</button>
+                </div>
+                <div>
+                    <button class="btn btn-link py-3 ps-0" [routerLink]="['/login']">Already have account</button>
+                </div>
+            </form>
+        </section>
+        <section class="right-section">
+            <img src="assets/images/door-img-cropped.png" alt="Login image" class="login-img">
+        </section>
+    </div>
+</main>

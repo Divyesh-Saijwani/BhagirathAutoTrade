@@ -1,0 +1,84 @@
+<div class="flex-grow-1 d-flex flex-column h-100 overflow-hidden">
+  <header class="d-flex pb-3">
+    <h5>User Details</h5>
+    <aside class="flex-grow-1 d-flex justify-content-end align-items-center">
+      <div class="d-flex flex-wrap page-toolbar__actions me-2">
+        <div class="page-toolbar__search-box">
+          <input
+            type="text"
+            class="form-control"
+            id="searchBox"
+            placeholder="Search Here"
+            [(ngModel)]="searchText"
+          />
+          <label for="searchBox" class="fa fa-search" id="searchBox"></label>
+        </div>
+      </div>
+    </aside>
+  </header>
+  <div class="flex-grow-1 overflow-vertical bg-white">
+    <div class="table-wrapper data-table">
+      <table class="data-table windshield-list" aria-describedby="claim table">
+        <thead class="sticky-table-header border-bottom">
+          <tr>
+            <th scope="col" class="serial-no">
+              <div class="cell-header">
+                <span> ID</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Full Name</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Contact No</span>
+              </div>
+            </th>
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Address</span>
+              </div>
+            </th>
+
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Email</span>
+              </div>
+            </th>
+
+            <th scope="col" class="vendor">
+              <div class="cell-header">
+                <span>Action</span>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of userList | serch : searchText ">
+            <td class="cell-body serial-no">{{ item.id }}</td>
+            <td class="cell-body">{{ item.fullName }}</td>
+            <td class="cell-body">{{ item.contactNo }}</td>
+            <td class="cell-body">{{ item.address }}</td>
+            <td class="cell-body">{{ item.email }}</td>
+            <td class="cell-body">
+              <button
+                class="btn btn-transparent p-0 me-2"
+                type="button"
+                (click)="addQuotation(item.id)"
+              >
+                <span class="fa fa-plus-square"></span>
+              </button>
+            </td>
+          </tr>
+          <tr *ngIf="userList?.length == 0">
+            <td colspan="9">
+              <h4 class="text-center py-3">No Record Found.!</h4>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

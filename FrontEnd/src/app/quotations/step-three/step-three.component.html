@@ -1,0 +1,86 @@
+<section class="d-flex flex-column h-100 overflow-hidden px-3">
+  <h4>Quotation Module</h4>
+  <div class="h-100 d-flex overflow-hidden">
+    <input type="checkbox" id="togglePrograms" hidden />
+    <!-- 1st collapsible section -->
+    <div class="collapsible-wrapper border-start border-top border-end bg-white position-relative">
+      <div class="program-toggle d-lg-flex d-none">
+        <label for="togglePrograms" class="cursor-pointer">
+          <span class="fi fi-sr-angle-circle-left"></span>
+        </label>
+      </div>
+      <h5 class="bg-light-gray fw-semibold border-bottom px-3 py-2 m-0">
+        Select Category
+      </h5>
+      <div class="program-details overflow-vertical">
+        <div ngbAccordion [closeOthers]="true">
+          @for (item of categoryList; track item) {
+          <div ngbAccordionItem [collapsed]="item !== 'Window'">
+            <!-- <h2 ngbAccordionHeader> -->
+            <button ngbAccordionButton class="btn btn-transparent category-list btn-block d-flex align-items-center">
+              <span class="fi fi-ts-arrow-circle-right"></span>
+              <span class="ms-2">{{ item }}</span>
+            </button>
+            <!-- </h2> -->
+            <div ngbAccordionCollapse>
+              <div ngbAccordionBody>
+                <ng-template>
+                  <div class="px-4 py-1">
+                    <div class="form-group px-2">
+                      <div class="form-check sub-category-item mb-0">
+                        <input class="form-check-input" type="radio" id="awning" name="category" />
+                        <label class="form-check-label" for="awning">
+                          Awning
+                        </label>
+                      </div>
+                      <div class="form-check sub-category-item mb-0">
+                        <input class="form-check-input" type="radio" id="Single select" name="category" />
+                        <label class="form-check-label" for="Single select">
+                          Single select
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+
+    <!-- Right side card section -->
+    <section class="flex-grow-1 overflow-vertical bg-white">
+      <h5 class="bg-light-gray fw-semibold border-bottom px-3 py-2 m-0">
+        Type of categories
+      </h5>
+
+      <div class="p-3">
+        @for (item of items; track item) {
+        <div class="">
+          <h5 class="text-start border-bottom flex-grow-1 px-3 pb-2">
+            {{ item }}
+          </h5>
+          <div class="d-flex flex-wrap pt-2">
+            <div class="d-flex align-items-center mx-2" *ngFor="let productItem of demoItems">
+              <a href="#" class="card category-card flex-column shadow-sm p-1 py-3 mb-3" style="text-decoration: none;">
+                <!-- <figure class="mb-0">
+                  <img [src]="productItem.imgPath" alt="Card Image" class="img-fluid">
+                </figure> -->
+                <p class="card-text text-center mt-2 mb-0">
+                  {{ productItem.name }}
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="flex-grow-1 overflow-vertical">
+
+
+      </div>
+    </section>
+  </div>
+</section>

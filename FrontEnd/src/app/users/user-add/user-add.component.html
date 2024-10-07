@@ -1,0 +1,334 @@
+<app-overlay [config]="inputConfig" (cancel)="onCancel()" (submit)="onSubmit()">
+
+  <section class="flex-grow-1 modal-body overflow-vertical p-3">
+    <!-- <form> -->
+      <!-- <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="fullName" class="form-label fw-semibold"
+              >Full Name <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Full Name"
+              class="form-control"
+              formControlName="fullName"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="contactNo" class="form-label fw-semibold"
+              >Contact No <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id="contactNo"
+              placeholder="Contact No"
+              class="form-control"
+              formControlName="contactNo"
+              appPhoneMask
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select User Group</label>
+            <ng-select
+              [items]="userGroupsData"
+              formControlName="userGroup"
+              placeholder="Select User Groups"
+              
+              
+              [bindLabel]="userGroupsData.label"
+              [bindValue]="userGroupsData.value"
+              (change)="changeUserGroup($event)"
+            >
+            </ng-select>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Roles</label>
+            <ng-select
+              [items]="roleLists"
+              formControlName="role"
+              
+              placeholder="Select User Groups"
+              
+              [bindLabel]="roleLists.label"
+              [bindValue]="roleLists.value"
+            >
+            </ng-select>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="email" class="form-label fw-semibold"
+              >Email <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id="email"
+              placeholder="Email"
+              class="form-control"
+              formControlName="email"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="password" class="form-label fw-semibold"
+              >Password <span class="text-danger">*</span></label
+            >
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter password"
+              class="form-control"
+              formControlName="password"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="address" class="form-label fw-semibold"
+              >Business Address <span class="text-danger">*</span></label
+            >
+            <textarea
+              id="address"
+              placeholder="Enter address"
+              class="form-control"
+              formControlName="address"
+            ></textarea>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" *ngIf="isBuilder">
+          <div class="form-group py-3">
+            <label for="Markup" class="form-label fw-semibold"
+              >Markup <span class="text-danger">*</span></label
+            >
+            <input
+              type="Markup"
+              id="Markup"
+              placeholder="Enter Markup"
+              class="form-control"
+              formControlName="markup"
+            />
+          </div>
+        </div>
+      </div> -->
+      <div class="row">
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Exchange</label>
+            <select class="form-control form-select-lg" [(ngModel)]="algoFormGroup.exchange" (ngModelChange)="onExchangeChange()">
+              <option value="" disabled selected>Select Exchange</option>
+              <option value="NSE">NSE</option>
+              <!-- <option value="BSE">BSE</option> -->
+            </select>
+          </div>
+        </div>
+          <div class="col-12 col-md-6" >
+            <div class="form-group py-3">
+              <label for="" class="form-label fw-semibold">Select Type</label>
+              <select class="form-control form-select-lg" [(ngModel)]="algoFormGroup.type" (ngModelChange)="onTypeOptionUpdate()">
+                <option value="" disabled selected>Select Type</option>
+                <!-- <option value="EQ" selected="selected">EQ</option> -->
+                <option value="DERIVATIVE">DERIVATIVE</option>
+              </select>
+            </div>
+          </div>
+        <div class="col-12 col-md-6" *ngIf="derivativeoption">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Instrument</label>
+            <select class="form-control form-select-lg" [(ngModel)]="algoFormGroup.instrument" (ngModelChange)="onInstrumentOptionUpdate()">
+              <option value="" disabled selected>Select Instrument</option>
+              <option value="FUTIDX">FUTIDX</option>
+              <!-- <option value="FUTIVX">FUTIVX</option>
+              <option value="FUTSTK">FUTSTK</option> -->
+              <option value="OPTIDX">OPTIDX</option>
+              <!-- <option value="OPTSTK">OPTSTK</option> -->
+            </select>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Option</label>
+            <select class="form-control form-select-lg" [(ngModel)]="algoFormGroup.optionType">
+            <option value="XX" selected *ngIf="derivativeoption">XX</option>
+            <option value="CE" *ngIf="optidxstxoption">CE</option>
+            <option value="PE" *ngIf="optidxstxoption">PE</option>
+          </select>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select script</label>
+            <mat-form-field>
+              <input type="text" placeholder="Symbol" matInput [matAutocomplete]="auto" [formControl]="searchControl" [(ngModel)]="algoFormGroup.symbol" (click)="fetchOptions()">
+              <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onOptionSelected($event)">
+                <mat-option *ngFor="let option of filteredOptions" [value]="option">
+                  {{ option }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Expiry</label>
+            <select class="form-control form-select-lg mt-1" [(ngModel)]="algoFormGroup.expiryDate">
+              <option *ngFor="let option of expiryDates" [value]="option">{{ option }}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-12 col-md-6" *ngIf="optidxstxoption">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold" >Select Strike Price (Call / Other)</label>
+            <select class="form-control form-select-lg mt-1" [(ngModel)]="algoFormGroup.callStrikePrice">
+              <option *ngFor="let option of strikePrices" [value]="option">{{ option }}</option>
+            </select>
+            <!-- <ng-select
+              [items]="strikePrices"
+              
+              placeholder="Select Strike Price (Call / Other)"
+              
+              [(ngModel)]="algoFormGroup.callStrikePrice"
+            >
+            </ng-select> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6" *ngIf="optidxstxoption">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold" >Select Strike Price (Put)</label>
+            <select class="form-control form-select-lg mt-1" [(ngModel)]="algoFormGroup.putStrikePrice">
+              <option *ngFor="let option of strikePrices" [value]="option">{{ option }}</option>
+            </select>
+            <!-- <ng-select
+              [items]="strikePrices"
+              
+              placeholder="Select Strike Price (Put)"
+              
+              [(ngModel)]="algoFormGroup.putStrikePrice"
+            >
+            </ng-select> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Direction</label>
+            <select class="form-control form-select-lg" [(ngModel)]="algoFormGroup.direction">
+              <option value="" disabled selected>Select Direction</option>
+              <option value="Buy">Buy</option>
+              <option value="Sell">Sell</option>
+            </select>
+            <!-- <ng-select
+              [items]="['Buy','Sell']"
+              
+              placeholder="Select Direction"
+              
+              [(ngModel)]="algoFormGroup.direction"
+            >
+            </ng-select> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select No of Lots</label>
+            <select class="form-control form-select-lg" [(ngModel)]="algoFormGroup.noOfLots">
+              <option value="" disabled selected>Select No of Lots</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <!-- <ng-select
+              [items]="[1,2,3,4,5]"
+              
+              placeholder="Select No of Lots"
+              
+              [(ngModel)]="algoFormGroup.noOfLots"
+            >
+            </ng-select> -->
+          </div>
+        </div>
+        <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Multiple</label>
+            <select class="form-control form-select-lg" [(ngModel)]="algoFormGroup.multiple">
+              <option value="" disabled selected>Select Multiple</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <!-- <ng-select
+              [items]="[1,2,3,4,5]"
+              
+              placeholder="Select Multiple"
+              
+              [(ngModel)]="algoFormGroup.multiple"
+            >
+            </ng-select> -->
+          </div>
+        </div>
+        <!-- <div class="col-12 col-md-6" >
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold">Select Broker</label>
+            <ng-select
+              [items]="['ICICI Direct']"
+              
+              placeholder="Select Brokers"
+              
+            >
+            </ng-select>
+          </div>
+        </div> -->
+        <!-- <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold"
+              >User Id(Broker) <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id=""
+              placeholder="UserID"
+              class="form-control"
+            />
+          </div>
+        </div> 
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold"
+              >Password  <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id=""
+              placeholder="Password"
+              class="form-control"
+            />
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="form-group py-3">
+            <label for="" class="form-label fw-semibold"
+              >OTP <span class="text-danger">*</span></label
+            >
+            <input
+              type="text"
+              id=""
+              placeholder="OTP"
+              class="form-control"
+            />
+          </div>
+        </div>-->
+      </div>
+    <!-- </form> -->
+  </section>
+
+</app-overlay>

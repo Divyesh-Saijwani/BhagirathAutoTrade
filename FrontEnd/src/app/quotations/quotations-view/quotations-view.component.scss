@@ -1,0 +1,110 @@
+.address-cell {
+    text-align: right;
+    font-size: 10px;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: black;
+}
+
+.email {
+    text-decoration: underline;
+    color: blue;
+}
+
+.header-cell {
+    text-align: left;
+    padding: 3px 0;
+}
+
+.wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+}
+
+.custom-label {
+    font-weight: 600;
+    font-size: 10px;
+    padding-bottom: 4px;
+}
+
+.custom-value {
+    font-size: 10px;
+}
+
+.cell-lg {
+    width: 40%;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.form-label {
+    padding-left: 7px;
+    font-size: 11px;
+}
+
+.fs-16 {
+    font-size: 16px;
+}
+
+.fs-14 {
+    font-size: 14px;
+}
+
+.fs-10 {
+    font-size: 10px;
+}
+
+.fs-11 {
+    font-size: 11px;
+}
+
+.text-xs {
+    font-size: 9px;
+}
+
+.section-heading {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+
+}
+
+@page {
+    size: auto;
+    margin: 0mm;
+}
+
+@media print {
+    button {
+        display: none;
+    }
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.w-15 {
+    width: 15%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.table-fixed {
+    table-layout: fixed;
+}
+
+.fs-12 {
+    font-size: 12px;
+}

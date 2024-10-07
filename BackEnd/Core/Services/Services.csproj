@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="7.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BhagirathFincareClassLibrary\BhagirathFincareClassLibrary.csproj" />
+    <ProjectReference Include="..\BhagirathFincareCore\BhagirathFincareCore.csproj" />
+    <ProjectReference Include="..\BhagirathFincareUtil\BhagirathFincareUtil.csproj" />
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+    <ProjectReference Include="..\Identity\Identity.csproj" />
+    <ProjectReference Include="..\MarketCore\MarketData\MarketData.csproj" />
+    <ProjectReference Include="..\Services.Abstractions\Services.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

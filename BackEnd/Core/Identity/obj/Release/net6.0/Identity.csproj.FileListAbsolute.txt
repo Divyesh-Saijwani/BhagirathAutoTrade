@@ -1,0 +1,14 @@
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\bin\Release\net6.0\Identity.deps.json
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\bin\Release\net6.0\Identity.runtimeconfig.json
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\bin\Release\net6.0\Identity.dll
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\bin\Release\net6.0\Identity.pdb
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\Identity.csproj.AssemblyReference.cache
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\Identity.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\Identity.AssemblyInfoInputs.cache
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\Identity.AssemblyInfo.cs
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\Identity.csproj.CoreCompileInputs.cache
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\Identity.dll
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\refint\Identity.dll
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\Identity.pdb
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\Identity.genruntimeconfig.cache
+D:\Projects\resolvers\Api\Resolvers.Api\Identity\obj\Release\net6.0\ref\Identity.dll
